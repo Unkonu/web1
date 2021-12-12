@@ -20,6 +20,9 @@
   
   <?php
   
+  
+    $formulaire_valide = false;
+ 
     if (!empty($_GET)) {
   
       echo "Traitement du formulaire method GET <br/>";
@@ -31,33 +34,43 @@
       $password = $_GET['form1Pass'];
       $role = $_GET['form1Role']; 
     
+      $formulaire_valide = true;
+      
     } else if (!empty($_POST)) {
-        echo "Traitement du formulaire method GET";
+        echo "Traitement du formulaire method POST";
     
       $nom = $_POST['form1Nom'];
       $prenom = $_POST['form1Prenom'];
       $mail = $_POST['form1Mail'];
       $tel = $_POST['form1Tel'];
       $password = $_POST['form1Pass'];
-      $role = $_POST['form1Role']; 
-
-    } else {
-      echo("<p>Le Formulaire n'a pas &eacute;t&eacute; rempli");
+      $role = $_POST['form1Role'];
+       
+      $formulaire_valide = true;
+ 
     }
     
-    echo $nom;
-    echo "<br/>";
-    echo $prenom;
-    echo "<br/>";
-    echo $mail;
-    echo "<br/>";
-    echo $tel;
-    echo "<br/>";
-    echo $password;
-    echo "<br/>";
-    echo $role;
-    echo "<br/>";
-  
+    if ($formulaire_valide == true) {
+    
+      echo $nom;
+      echo "<br/>";
+      echo $prenom;
+      echo "<br/>";
+      echo $mail;
+      echo "<br/>";
+      echo $tel;
+      echo "<br/>";
+      echo $password;
+      echo "<br/>";
+      echo $role;
+      echo "<br/>";
+      
+    } else {
+    
+      echo("<p>Le Formulaire n'a pas &eacute;t&eacute; rempli");
+      
+    }
+      
   ?>
   
   
