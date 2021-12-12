@@ -16,9 +16,9 @@ $(document).ready(function() {
  }); 
  
   // Ajout des évenements
- $(".fform1").submit(function(event) {
-   console.log("envoie du formulaire pour traitement"); 
- }); 
+ // $(".fform1").submit(function(event) {
+ //  console.log("envoie du formulaire pour traitement"); 
+ // }); 
 
 
 });
