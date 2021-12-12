@@ -23,13 +23,16 @@
     $servername = 'localhost';
     $username = 'devsql1';
     $password = 'devsql1';
-            
-    //On établit la connexion
-    $conn = new PDO("mysql:host=$servername;dbname=base_test", $username, $password);
-  
-    echo 'Connexion : ';
-    echo $conn;
-    echo '<br/>';
+    
+    try {      
+      //On établit la connexion
+      $conn = new PDO("mysql:host=$servername;dbname=base_test", $username, $password);
+    
+      echo "Connexion : ".$conn."<br />";
+    
+    } catch(PDOException $e) {
+      echo "Erreur : ". $e->getMessage();    
+    }
       
   ?>
   
