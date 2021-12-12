@@ -30,13 +30,13 @@
     
       echo "Connexion OK ";
       
-      echo ("Resultats de la requete $requete");
+      echo "Resultats de la requete ",$requete;
       
       $requete = "SELECT col1,col2 FROM table_test2 ORDER BY col1";
       
       foreach ($conn->query($requete) as $ligne) {
       
-        echo "$row['col1'] - $row['col2']";
+        echo $row['col1']," - ",$row['col2'];
       }
       
       
