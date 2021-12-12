@@ -28,8 +28,7 @@
     echo $_GET['form1Mail'];
     echo $_GET['form1Tel'];
     echo $_GET['form1Pass'];
-  
-  
+    echo $_GET['form1Role'];
   
   ?>
   
