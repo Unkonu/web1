@@ -20,12 +20,11 @@
   
   <?php
   
-  
     $formulaire_valide = false;
  
     if (!empty($_GET)) {
   
-      echo "Traitement du formulaire method GET <br/>";
+      echo "Traitement du formulaire method GET <br />";
       
       $nom = $_GET['form1Nom'];
       $prenom = $_GET['form1Prenom'];
@@ -37,7 +36,7 @@
       $formulaire_valide = true;
       
     } else if (!empty($_POST)) {
-        echo "Traitement du formulaire method POST";
+        echo "Traitement du formulaire method POST <br />";
     
       $nom = $_POST['form1Nom'];
       $prenom = $_POST['form1Prenom'];
