@@ -36,7 +36,9 @@
       
       foreach ($conn->query($requete) as $ligne) {
       
-        echo $ligne['nom']," - ",$ligne['prenom'],"<br />";
+        echo $ligne['nom']," - ",$ligne['prenom']," - ";
+        echo $ligne['mail']," - ",$ligne['tel']," - ";
+        echo $ligne['password']," - ",$ligne['role'],"<br />";
 
       }// foreach
       
