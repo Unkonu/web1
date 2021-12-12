@@ -14,6 +14,7 @@
 <body>
   <header>
     <a href="index.html">Retour formulaire</a>
+    <a href="liste.php">Afficher la liste des utilisateurs</a>
   </header>
 
   <section>
