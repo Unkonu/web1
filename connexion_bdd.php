@@ -12,8 +12,8 @@
 
 </head>
 <body>
-  <header>
-
+  <header>  
+    <a href="index.html">Retour formulaire</a>
   </header>
 
   <section>
@@ -37,13 +37,15 @@
       foreach ($conn->query($requete) as $ligne) {
       
         echo $ligne['col1']," - ",$ligne['col2'],"<br />";
-      }
+
+      }// foreach
       
+      // Fermeture connexion
+      $conn = null;
       
-    
     } catch(PDOException $e) {
-      echo "Erreur : ", $e->getMessage();    
-    }
+      echo "Erreur : ", $e->getMessage(),"<br />";    
+    }// catch
     
       
   ?>
