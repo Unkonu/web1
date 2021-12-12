@@ -1,0 +1,16 @@
+
+.form1 p{
+  display : block;
+}
+
+#form1 p label {
+  display: inline-table;  
+  width: 100px;
+}
+
+#form1 p input {
+  display: inline;  
+  margin : 2px;
+}
+
+
