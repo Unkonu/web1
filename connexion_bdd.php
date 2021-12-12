@@ -28,15 +28,15 @@
       //On établit la connexion
       $conn = new PDO("mysql:host=$servername;dbname=base_test", $username, $password);
     
-      echo "Connexion OK ";
+      echo "Connexion OK <br/>";
       
-      echo "Resultats de la requete ",$requete;
+      echo "Resultats de la requete $requete <br />";
       
       $requete = "SELECT col1,col2 FROM table_test2 ORDER BY col1";
       
       foreach ($conn->query($requete) as $ligne) {
       
-        echo $row['col1']," - ",$row['col2'];
+        echo $ligne['col1']," - ",$ligne['col2'],"<br />";
       }
       
       
