@@ -26,13 +26,25 @@
     
     try {      
       //On établit la connexion
-      $conn = new PDO("mysql:host=localhost;dbname=base_test", $username, $password);
+      $conn = new PDO("mysql:host=$servername;dbname=base_test", $username, $password);
     
       echo "Connexion OK ";
+      
+      echo ("Resultats de la requete $requete");
+      
+      $requete = "SELECT col1,col2 FROM table_test2 ORDER BY col1";
+      
+      foreach ($conn->query($requete) as $ligne) {
+      
+        echo "$row['col1'] - $row['col2']";
+      }
+      
+      
     
     } catch(PDOException $e) {
       echo "Erreur : ", $e->getMessage();    
     }
+    
       
   ?>
   
