@@ -20,7 +20,7 @@
   
   <?php
   
-    $servername = 'localhost';
+    $servername = '192.168.0.1';
     $username = 'devsql1';
     $password = 'devsql1';
             
