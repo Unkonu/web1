@@ -27,9 +27,9 @@
     //On établit la connexion
     $conn = new PDO("mysql:host=$servername;dbname=base_test", $username, $password);
   
-    echo "Connexion : ";
+    echo 'Connexion : ';
     echo $conn;
-    echo "<br/>";
+    echo '<br/>';
       
   ?>
   
