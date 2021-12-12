@@ -20,17 +20,14 @@
   
   <?php
   
-    $servername = '192.168.0.1';
+    $servername = 'localhost';
     $username = 'devsql1';
     $password = 'devsql1';
             
     //On établit la connexion
     $conn = new PDO("mysql:host=$servername;dbname=base_test", $username, $password);
   
-    echo ("Connexion : ");
-    echo $conn;
-    echo ("<br />");
-
+    echo ("Connexion : $conn<br/>");
       
   ?>
   
