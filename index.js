@@ -16,7 +16,8 @@ $(document).ready(function() {
  }); 
  
   // Ajout des évenements
- $("#form1").submit(function(event) {   
+ $(".fform1").submit(function(event) {
+   console.log("envoie du formulaire pour traitement"); 
  }); 
 
 

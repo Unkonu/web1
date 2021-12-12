@@ -18,12 +18,14 @@
   </header>
 
   <section>
-  <!php>
+  
+  <?php
+  
+    echo "Traitement du formulaire";
   
   
   
-  
-  </php>
+  ?>
   
   
   
