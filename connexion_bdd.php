@@ -26,9 +26,11 @@
     
     try {      
       //On établit la connexion
-      $conn = new PDO("mysql:host=$servername;dbname=base_test", $username, $password);
+      $conn = new PDO("mysql:host=localhost;dbname=base_test", $username, $password);
     
-      echo "Connexion : ",$conn,"<br />";
+      echo "Connexion : ";
+      echo $conn;
+      echo "<br />";
     
     } catch(PDOException $e) {
       echo "Erreur : ", $e->getMessage();    
