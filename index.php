@@ -30,7 +30,7 @@
       $prenom = $_GET['form1Prenom'];
       $mail = $_GET['form1Mail'];
       $tel = $_GET['form1Tel'];
-      $password = $_GET['form1Pass'];
+      $pass = $_GET['form1Pass'];
       $role = $_GET['form1Role']; 
     
       $formulaire_valide = true;
@@ -42,7 +42,7 @@
       $prenom = $_POST['form1Prenom'];
       $mail = $_POST['form1Mail'];
       $tel = $_POST['form1Tel'];
-      $password = $_POST['form1Pass'];
+      $pass = $_POST['form1Pass'];
       $role = $_POST['form1Role'];
        
       $formulaire_valide = true;
@@ -50,7 +50,6 @@
     }
     
     if ($formulaire_valide == true) {
-
 
       $servername = 'localhost';
       $username = 'devsql1';
@@ -62,7 +61,7 @@
       
         echo "Connexion OK <br/>";
               
-        $requete = "INSERT INTO utilisateurs VALUES $nom,$prenom,$mail,$tel,$password,$role";
+        $requete = "INSERT INTO utilisateurs VALUES $nom,$prenom,$mail,$tel,$pass,$role";
 
         echo "Resultats de la requete $requete <br />";
         
