@@ -29,14 +29,14 @@
       $conn = new PDO("mysql:host=$servername;dbname=base_test", $username, $password);
     
       echo "Connexion OK <br/>";
-      
+            
+      $requete = "SELECT * FROM utilisateurs ORDER BY id";
+
       echo "Resultats de la requete $requete <br />";
-      
-      $requete = "SELECT col1,col2 FROM table_test2 ORDER BY col1";
       
       foreach ($conn->query($requete) as $ligne) {
       
-        echo $ligne['col1']," - ",$ligne['col2'],"<br />";
+        echo $ligne['nom']," - ",$ligne['prenom'],"<br />";
 
       }// foreach
       

@@ -50,20 +50,35 @@
     }
     
     if ($formulaire_valide == true) {
-    
-      echo $nom;
-      echo "<br/>";
-      echo $prenom;
-      echo "<br/>";
-      echo $mail;
-      echo "<br/>";
-      echo $tel;
-      echo "<br/>";
-      echo $password;
-      echo "<br/>";
-      echo $role;
-      echo "<br/>";
+
+
+      $servername = 'localhost';
+      $username = 'devsql1';
+      $password = 'devsql1';
       
+      try {      
+        //On établit la connexion
+        $conn = new PDO("mysql:host=$servername;dbname=base_test", $username, $password);
+      
+        echo "Connexion OK <br/>";
+              
+        $requete = "INSERT INTO utilisateurs VALUES $nom,$prenom,$mail,$tel,$password,$role";
+
+        echo "Resultats de la requete $requete <br />";
+        
+        if ($conn->query($requete) === true) {
+        
+          echo "Insertion réussie<br/>";
+
+        }// if
+        
+        // Fermeture connexion
+        $conn = null;
+        
+      } catch(PDOException $e) {
+        echo "Erreur : ", $e->getMessage(),"<br />";    
+      }// catch
+        
     } else {
     
       echo("<p>Le Formulaire n'a pas &eacute;t&eacute; rempli");
