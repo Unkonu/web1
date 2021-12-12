@@ -22,6 +22,12 @@
   <?php
   
     echo "Traitement du formulaire";
+    
+    echo $_GET['form1Nom'];
+    echo $_GET['form1Prenom'];
+    echo $_GET['form1Mail'];
+    echo $_GET['form1Tel'];
+    echo $_GET['form1Pass'];
   
   
   
