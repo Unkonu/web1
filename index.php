@@ -61,11 +61,11 @@
       
         echo "Connexion OK <br/>";
               
-        $requete = "INSERT INTO utilisateurs VALUES $nom,$prenom,$mail,$tel,$pass,$role";
+        $requete = "INSERT INTO utilisateurs VALUES ($nom,$prenom,$mail,$tel,$pass,$role)";
 
         echo "Resultats de la requete $requete <br />";
         
-        if ($conn->query($requete) === true) {
+        if ($conn->exec($requete) === true) {
         
           echo "Insertion réussie<br/>";
 
