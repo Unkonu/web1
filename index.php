@@ -61,10 +61,7 @@
       
         echo "Connexion OK <br/>";
               
-        // $requete = "INSERT INTO utilisateurs (nom,prenom,mail,tel,password,role) 
-        //            VALUES ('$nom','$prenom','$mail','$tel','$pass','$role')";
-
-        $requete = "INSERT INTO utilisateurs 
+        $requete = "INSERT INTO utilisateurs (nom,prenom,mail,tel,password,role) 
                     VALUES ('$nom','$prenom','$mail','$tel','$pass','$role')";
 
         echo "Resultats de la requete $requete <br />";
