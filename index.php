@@ -25,7 +25,7 @@
       echo "Traitement du formulaire method GET";
       
       echo $_GET['form1Nom'];
-      echo "<br/">;
+      echo "<br/>";
       echo $_GET['form1Prenom'];
       echo $_GET['form1Mail'];
       echo $_GET['form1Tel'];
