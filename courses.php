@@ -33,12 +33,12 @@
         //On établit la connexion
         $conn = new PDO("mysql:host=$servername;dbname=$nom_base", $username, $password);
       
-        echo "Connexion OK <br/>";
+        // echo "Connexion OK <br/>";
               
         $requete = "INSERT INTO courses (nom,statut) 
                     VALUES ('$nom',false)";
 
-        echo "Resultats de la requete $requete <br />";
+        // echo "Resultats de la requete $requete <br />";
         
         if ($conn->exec($requete) === true) {
         
@@ -80,6 +80,8 @@
   
   <section>
   
+  <form id="liste" enctype="multipart/form-data" method="post" action="courses.php">
+  
   <?php
   
     $servername = 'localhost';
@@ -91,11 +93,11 @@
       //On établit la connexion
       $conn = new PDO("mysql:host=$servername;dbname=$nom_base", $username, $password);
     
-      echo "Connexion OK <br/>";
+      // echo "Connexion OK <br/>";
             
       $requete = "SELECT * FROM courses ORDER BY id";
 
-      echo "Resultats de la requete $requete <br />";
+      // echo "Resultats de la requete $requete <br />";
       
       foreach ($conn->query($requete) as $ligne) {
       
