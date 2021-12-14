@@ -20,7 +20,7 @@
   
    if (!empty($_POST)) {
    
-      echo "Traitement du formulaire method POST <br />";
+      // echo "Traitement du formulaire method POST <br />";
     
       $nom = $_POST['nomCourse'];
        
@@ -42,7 +42,7 @@
         
         if ($conn->exec($requete) === true) {
         
-          echo "Insertion réussie<br/>";
+          // echo "Insertion réussie<br/>";
 
         }// if
         
@@ -99,13 +99,25 @@
 
       // echo "Resultats de la requete $requete <br />";
       
+      // Construction de la liste
+      echo "<li>";
+
       foreach ($conn->query($requete) as $ligne) {
       
+        echo "<ul>";
         echo $ligne['id']," - ";
         echo $ligne['nom']," - ";
         echo $ligne['statut'],"<br />";
 
+        echo "<input type=\"button\"" value=\"-\">"; 
+
+        echo "</ul>";
+
+   
+   
       }// foreach
+
+      echo "</li>";
       
       // Fermeture connexion
       $conn = null;
