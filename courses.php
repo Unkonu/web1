@@ -37,7 +37,7 @@
         echo "Connexion OK <br/>";
               
         $requete = "INSERT INTO courses (nom,statut) 
-                    VALUES ('$nom','false')";
+                    VALUES ('$nom',false)";
 
         echo "Resultats de la requete $requete <br />";
         
