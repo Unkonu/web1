@@ -109,7 +109,7 @@
         echo $ligne['nom']," - ";
         echo $ligne['statut'],"<br />";
 
-        echo "<input type=\"button\" value=\"-\">"; 
+        echo "<input id=\"$ligne['id']\" name=\"$ligne['id']\" type=\"button\" value=\"-\">"; 
 
         echo "</ul>";
 
