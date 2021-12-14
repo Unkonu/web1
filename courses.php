@@ -79,7 +79,7 @@
           
             // echo "Connexion OK <br/>";
                   
-            $requete = "DELETE * FROM courses WHERE id=$idCourse";
+            $requete = "DELETE FROM courses WHERE id=$idCourse";
 
             // echo "Resultats de la requete $requete <br />";
             
