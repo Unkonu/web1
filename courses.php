@@ -22,37 +22,84 @@
    
       // echo "Traitement du formulaire method POST <br />";
     
-      $nom = $_POST['nomCourse'];
-       
-      $servername = 'localhost';
-      $username = 'devsql1';
-      $password = 'devsql1';
-      $nom_base = 'base_courses';
-    
-      try {      
-        //On établit la connexion
-        $conn = new PDO("mysql:host=$servername;dbname=$nom_base", $username, $password);
+      $action = $_POST['Action'];
+
+      switch($action) {
+        case "ajout" :
+
+          $nom = $_POST['nomCourse'];
+           
+          $servername = 'localhost';
+          $username = 'devsql1';
+          $password = 'devsql1';
+          $nom_base = 'base_courses';
+        
+          try {      
+            //On établit la connexion
+            $conn = new PDO("mysql:host=$servername;dbname=$nom_base", $username, $password);
+          
+            // echo "Connexion OK <br/>";
+                  
+            $requete = "INSERT INTO courses (nom,statut) 
+                        VALUES ('$nom',false)";
+
+            // echo "Resultats de la requete $requete <br />";
+            
+            if ($conn->exec($requete) === true) {
+            
+              // echo "Insertion réussie<br/>";
+
+            }// if
+            
+            // Fermeture connexion
+            $conn = null;
+            
+          } catch(PDOException $e) {
+            echo "Erreur : ", $e->getMessage(),"<br />";    
+          }// catch
+        
+        break; // case Ajout
+        
+        case "modif" :
+        
+          $nom = $_POST['nomCourse'];
+           
+          $servername = 'localhost';
+          $username = 'devsql1';
+          $password = 'devsql1';
+          $nom_base = 'base_courses';
+        
+          try {      
+            //On établit la connexion
+            $conn = new PDO("mysql:host=$servername;dbname=$nom_base", $username, $password);
+          
+            // echo "Connexion OK <br/>";
+                  
+            $requete = "INSERT INTO courses (nom,statut) 
+                        VALUES ('$nom',false)";
+
+            // echo "Resultats de la requete $requete <br />";
+            
+            if ($conn->exec($requete) === true) {
+            
+              // echo "Insertion réussie<br/>";
+
+            }// if
+            
+            // Fermeture connexion
+            $conn = null;
+            
+          } catch(PDOException $e) {
+            echo "Erreur : ", $e->getMessage(),"<br />";    
+          }// catch
       
-        // echo "Connexion OK <br/>";
-              
-        $requete = "INSERT INTO courses (nom,statut) 
-                    VALUES ('$nom',false)";
-
-        // echo "Resultats de la requete $requete <br />";
+        break; // case Modif
         
-        if ($conn->exec($requete) === true) {
-        
-          // echo "Insertion réussie<br/>";
-
-        }// if
-        
-        // Fermeture connexion
-        $conn = null;
-        
-      } catch(PDOException $e) {
-        echo "Erreur : ", $e->getMessage(),"<br />";    
-      }// catch
-        
+        default:
+          echo("<p>Le Formulaire n'a pas &eacute;t&eacute; rempli");
+      
+      }// fin switch
+       
     } else {
    
       echo("<p>Le Formulaire n'a pas &eacute;t&eacute; rempli");
@@ -65,7 +112,8 @@
   
   <div class="courses">
   <form id="courses" enctype="multipart/form-data" method="post" action="courses.php">
-   <fieldset>
+    <input id="action" name="action" type="hidden" value="ajout">
+    <fieldset>
     <legend>Courses</legend>
       <label for="nomCourse"></label>
       <input id="nomCourse" name="nomCourse" type="text" value="" />
@@ -81,7 +129,8 @@
   <section>
   
   <form id="liste" enctype="multipart/form-data" method="post" action="courses.php">
-  
+  <input id="action" name="action" type="hidden" value="modif">
+
   <?php
   
     $servername = 'localhost';
@@ -112,7 +161,7 @@
       
         echo "<li>";
         echo $ligne['nom'];
-        echo "<input id=\"ligne_$ligneId\" name=\"ligne_$ligneId\" type=\"button\" value=\"-\">"; 
+        echo "<input id=\"ligne_$ligneId\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">"; 
 
         echo "</li>\n";
 
