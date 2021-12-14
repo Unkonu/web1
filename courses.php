@@ -22,7 +22,10 @@
    
       // echo "Traitement du formulaire method POST <br />";
     
-      $action = $_POST['Action'];
+      $action = $_POST['action'];
+
+
+      echo $action;
 
       switch($action) {
         case "ajout" :
