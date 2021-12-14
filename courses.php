@@ -15,16 +15,63 @@
   <header>
   </header>
 
+  <?php
+  // On teste si une nouvelle course a été ajouté
+  
+   if (!empty($_POST)) {
+   
+      echo "Traitement du formulaire method POST <br />";
+    
+      $nom = $_POST['nomCourse'];
+       
+      $servername = 'localhost';
+      $username = 'devsql1';
+      $password = 'devsql1';
+      $nom_base = 'base_courses';
+    
+      try {      
+        //On établit la connexion
+        $conn = new PDO("mysql:host=$servername;dbname=$base_courses", $username, $password);
+     
+      
+        echo "Connexion OK <br/>";
+              
+        $requete = "INSERT INTO courses (nom,statut) 
+                    VALUES ('$nom','false')";
+
+        echo "Resultats de la requete $requete <br />";
+        
+        if ($conn->exec($requete) === true) {
+        
+          echo "Insertion réussie<br/>";
+
+        }// if
+        
+        // Fermeture connexion
+        $conn = null;
+        
+      } catch(PDOException $e) {
+        echo "Erreur : ", $e->getMessage(),"<br />";    
+      }// catch
+        
+    } else {
+   
+      echo("<p>Le Formulaire n'a pas &eacute;t&eacute; rempli");
+
+    }
+      
+  ?>  
+
   <section>
   
   <div class="courses">
   <form id="courses" enctype="multipart/form-data" method="post" action="courses.php">
    <fieldset>
-    <legend>Formulaire</legend>
-      <label for="newCourse"></label>
-      <input id="newCourse" name="newCourse" type="text" value="Nom" />
-      <label for="form1Nom">      Nom      </label>
-      <input id="form1Nom" name="form1Nom" type="button" value="Nom" />
+    <legend>Courses</legend>
+      <label for="nomCourse"></label>
+      <input id="nomCourse" name="nomCourse" type="text" value="" />
+
+      <input id="ajouteCourse" type="submit" value="+" />
     </fieldset>
   </form>
   
@@ -32,8 +79,46 @@
 
   </section>
   
-  <footer>
+  <section>
   
+  <?php
+  
+    $servername = 'localhost';
+    $username = 'devsql1';
+    $password = 'devsql1';
+    $nom_base = 'base_courses';
+    
+    try {      
+      //On établit la connexion
+      $conn = new PDO("mysql:host=$servername;dbname=$base_courses", $username, $password);
+    
+      echo "Connexion OK <br/>";
+            
+      $requete = "SELECT * FROM courses ORDER BY id";
+
+      echo "Resultats de la requete $requete <br />";
+      
+      foreach ($conn->query($requete) as $ligne) {
+      
+        echo $ligne['id']," - ";
+        echo $ligne['nom']," - ";
+        echo $ligne['statut'],"<br />";
+
+      }// foreach
+      
+      // Fermeture connexion
+      $conn = null;
+      
+    } catch(PDOException $e) {
+      echo "Erreur : ", $e->getMessage(),"<br />";    
+    }// catch
+    
+      
+  ?>
+  
+  </section>
+  
+  <footer>
   
   </footer>
   
