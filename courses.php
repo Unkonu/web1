@@ -31,8 +31,7 @@
     
       try {      
         //On établit la connexion
-        $conn = new PDO("mysql:host=$servername;dbname=$base_courses", $username, $password);
-     
+        $conn = new PDO("mysql:host=$servername;dbname=$nom_base", $username, $password);
       
         echo "Connexion OK <br/>";
               
@@ -90,7 +89,7 @@
     
     try {      
       //On établit la connexion
-      $conn = new PDO("mysql:host=$servername;dbname=$base_courses", $username, $password);
+      $conn = new PDO("mysql:host=$servername;dbname=$nom_base", $username, $password);
     
       echo "Connexion OK <br/>";
             
