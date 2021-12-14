@@ -78,16 +78,15 @@
           
             // echo "Connexion OK <br/>";
                   
-            $requete = "INSERT INTO courses (nom,statut) 
-                        VALUES ('$nom',false)";
+            $requete = "DELETE  FROM courses WHERE id=";
 
             // echo "Resultats de la requete $requete <br />";
             
-            if ($conn->exec($requete) === true) {
+            // if ($conn->exec($requete) === true) {
             
               // echo "Insertion réussie<br/>";
 
-            }// if
+            // }// if
             
             // Fermeture connexion
             $conn = null;
@@ -131,9 +130,6 @@
   
   <section>
   
-  <form id="liste" enctype="multipart/form-data" method="post" action="courses.php">
-  <input id="action" name="action" type="hidden" value="modif">
-
   <?php
   
     $servername = 'localhost';
@@ -164,7 +160,13 @@
       
         echo "<li>";
         echo $ligne['nom'];
-        echo "<input id=\"ligne_$ligneId\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">"; 
+        echo "<form id=\"liste\" enctype=\"multipart/form-data\" method=\"post\" action=\"courses.php\">";
+        echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">";
+        echo "<input id=\"idCourse\" name=\"id\" type=\"hidden\" value=\"$ligneId\">";
+        
+        echo "<input name=\"ligne\" type=\"submit\" value=\"-\">"; 
+
+        echo "</form>";
 
         echo "</li>\n";
 
