@@ -66,6 +66,7 @@
         case "modif" :
         
           $nom = $_POST['nomCourse'];
+          $idCourse = $_POST['id'];
            
           $servername = 'localhost';
           $username = 'devsql1';
@@ -78,15 +79,15 @@
           
             // echo "Connexion OK <br/>";
                   
-            $requete = "DELETE  FROM courses WHERE id=";
+            $requete = "DELETE * FROM courses WHERE id=$idCourse";
 
             // echo "Resultats de la requete $requete <br />";
             
-            // if ($conn->exec($requete) === true) {
+            if ($conn->exec($requete) === true) {
             
-              // echo "Insertion réussie<br/>";
+              echo "Suppression réussie<br/>";
 
-            // }// if
+            }// if
             
             // Fermeture connexion
             $conn = null;
