@@ -100,26 +100,25 @@
       // echo "Resultats de la requete $requete <br />";
       
       // Construction de la liste
-      echo "<li>";
+      echo "<div class=\"listeCourses\"><ul>";
 
       foreach ($conn->query($requete) as $ligne) {
       
         $ligneId = $ligne['id'];
       
-        echo "<ul>";
-        echo $ligneId," - ";
-        echo $ligne['nom']," - ";
-        echo $ligne['statut'],"<br />";
-
+        if ($ligne['statut']) {
+          // Affichage différent de la ligne
+        }
+      
+        echo "<li>";
+        echo $ligne['nom'];
         echo "<input id=\"ligne_$ligneId\" name=\"ligne_$ligneId\" type=\"button\" value=\"-\">"; 
 
-        echo "</ul>";
+        echo "</li>\n";
 
-   
-   
       }// foreach
 
-      echo "</li>";
+      echo "</ul></div>\n";
       
       // Fermeture connexion
       $conn = null;
