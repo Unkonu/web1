@@ -161,7 +161,7 @@
       
         echo "<li>";
         echo $ligne['nom'];
-        echo "<form id=\"liste\" enctype=\"multipart/form-data\" method=\"post\" action=\"courses.php\">";
+        echo "<form id=\"liste\" class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"courses.php\">";
         echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">";
         echo "<input id=\"idCourse\" name=\"id\" type=\"hidden\" value=\"$ligneId\">";
         
