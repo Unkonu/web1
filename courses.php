@@ -104,12 +104,14 @@
 
       foreach ($conn->query($requete) as $ligne) {
       
+        $ligneId = $ligne['id'];
+      
         echo "<ul>";
-        echo $ligne['id']," - ";
+        echo $ligneId," - ";
         echo $ligne['nom']," - ";
         echo $ligne['statut'],"<br />";
 
-        echo "<input id=\"$ligne['id']\" name=\"$ligne['id']\" type=\"button\" value=\"-\">"; 
+        echo "<input id=\"$ligneId\" name=\"$ligneId\" type=\"button\" value=\"-\">"; 
 
         echo "</ul>";
 
