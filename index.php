@@ -136,7 +136,7 @@
   <form id="courses" class="formAjout" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
     <fieldset>
-    <legend>Courses</legend>
+    <legend><a class="list-group-item" >Courses</a></legend>
       <label for="nomCourse"></label>
       <input id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
       <input id="ajouteCourse" type="submit" value="+" />
