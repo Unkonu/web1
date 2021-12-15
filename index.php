@@ -133,14 +133,29 @@
   <section>
   
   <div class="container">
-  <form class="formAjout" enctype="multipart/form-data" method="post" action="index.php">
+  <form class="" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
     <a href="index.php" class="" ><h1>Courses</h1></a>
     <a href="#" class="list-group-item" >
     <input id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
     <input id="ajouteCourse" type="submit" value="+" />
     </a>
-  </form>
+    
+    
+                 <div class="input-group mb-3">
+                     <div class="input-group-prepend">
+                         <button class="btn btn-outline-info" type="button" id="bouton-texte">Bouton</button>
+                     </div>
+                     <input type="text" class="form-control" placeholder="Input type texte avec bouton" aria-label="Input type texte avec bouton" aria-describedby="bouton-texte">
+                 </div>
+
+                 <div class="input-group mb-3">
+                     <input type="text" class="form-control" placeholder="Autre input de type texte avec bouton" aria-label="Autre input type texte avec bouton" aria-describedby="texte-bouton">
+                     <div class="input-group-append">
+                         <button class="btn btn-outline-success" type="button" id="texte-bouton">Bouton</button>
+                     </div>
+                 </div>
+
   
   </div>
 
