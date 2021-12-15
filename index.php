@@ -179,7 +179,7 @@
         echo $nomCourse;
         echo "<input class=\"form-control\" type=\"text\" value=\"".$nomCourse."\">\n";
         echo "<div class=\"input-group-append\">\n";
-        echo "<input class=\"form-control\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
+        echo "<input class=\"btn\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
         echo "</div>\n";
 
