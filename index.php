@@ -176,9 +176,11 @@
           // Affichage différent de la ligne
         }
       
-        echo "<div class=\"\">\n";
+        echo "<div class=\"row\">\n";
+        echo "<div class=\"col-sm-4\">\n";
         echo $nomCourse;
         echo "<input class=\"\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
+        echo "</div>\n";
         echo "</div>\n";
 
       }// foreach
