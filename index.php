@@ -205,7 +205,7 @@
   <script type="text/javascript">
     function initElement(element)
     {
-      console.log(element);
+      console.log(element.classList);
     };
   </script>
   
