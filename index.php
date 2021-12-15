@@ -162,7 +162,7 @@
       
       // Construction de la liste
       echo "<div class=\"container\">\n";
-      echo "<form class=\"form-inline\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
+      echo "<form class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
       echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
        
       foreach ($conn->query($requete) as $ligne) {
