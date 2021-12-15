@@ -130,7 +130,7 @@
     <fieldset>
     <legend>Courses</legend>
       <label for="nomCourse"></label>
-      <input id="nomCourse" name="nomCourse" type="text" value="" />
+      <input id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
 
       <input id="ajouteCourse" type="submit" value="+" />
     </fieldset>
