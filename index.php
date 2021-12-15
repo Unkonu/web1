@@ -180,6 +180,7 @@
         echo $nomCourse;
         echo "<input class=\"\" type=\"text\" value=\"".$nomCourse."\">\n";
         echo "</div>\n";
+        echo "<button class=\"btn btn-outline-success\" name=\"ligne_$ligneId\" type=\"button\" value=\"-\">\n"; 
         echo "<input class=\"\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
 
