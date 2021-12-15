@@ -175,8 +175,8 @@
           // Affichage différent de la ligne
         }
       
-        echo "<div class=\"form-row\">\n";
-        echo "<label class=\"mr-2\">".$nomCourse."</label>\n";
+        echo "<div class=\"input-group mb-3\">\n";
+        echo "<input class=\"input-group-prepend\" type=\"text\" value=\".$nomCourse."\">\n";
         echo "<input class=\"form-control\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
 
