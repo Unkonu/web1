@@ -143,29 +143,27 @@
       
       // Construction de la liste
       echo "<div class=\"listeCourses\"><ul>";
+      echo "<form id=\"liste\" class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"courses.php\">";
+      echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">";
 
       foreach ($conn->query($requete) as $ligne) {
       
         $ligneId = $ligne['id'];
+        $nomCourse = $ligne['nom'];
+        $statut = $ligne['statut'];
       
-        if ($ligne['statut']) {
+        if ($statut) {
           // Affichage différent de la ligne
         }
       
         echo "<li>";
-        echo $ligne['nom'];
-        echo "<form id=\"liste\" class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"courses.php\">";
-        echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">";
-        echo "<input id=\"idCourse\" name=\"id\" type=\"hidden\" value=\"$ligneId\">";
-        
-        echo "<input name=\"ligne\" type=\"submit\" value=\"-\">"; 
-
-        echo "</form>";
-
+        echo $nomCourse;
+        echo "<input name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">"; 
         echo "</li>\n";
 
       }// foreach
 
+      echo "</form>";
       echo "</ul></div>\n";
       
       // Fermeture connexion
