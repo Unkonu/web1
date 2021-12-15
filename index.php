@@ -23,11 +23,11 @@
   </header>
 
   <?php
-  // On teste si une nouvelle course a été ajouté
+  /* On teste si une nouvelle course a été ajouté */
   
    if (!empty($_POST)) {
    
-      // echo "Traitement du formulaire method POST <br />";
+      /* echo "Traitement du formulaire method POST <br />"; */
     
       $action = $_POST['action'];
 
@@ -39,10 +39,10 @@
           if (!empty($nom)) {
           
           try {      
-            //On établit la connexion            
+            /* On établit la connexion */
             $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
           
-            // echo "Connexion OK <br/>";
+            /* echo "Connexion OK <br/>"; */
                   
             $requete = "INSERT INTO courses (nom,statut) 
                         VALUES ('$nom',false)";
@@ -89,8 +89,7 @@
           
             try {      
               //On établit la connexion
-              $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, 
-                              UTILISATEUR, MOTDEPASSE);
+              $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
             
               // echo "Connexion OK <br/>";
                     

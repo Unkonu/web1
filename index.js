@@ -9,11 +9,11 @@ $(document).ready(function() {
  
   
   // Ajout des évenements
- $(".champsForm1 input").click(function(event) {
+ //$(".champsForm1 input").click(function(event) {
  
-   $(event.target).attr("value","");
+  // $(event.target).attr("value","");
    
- }); 
+ //}); 
  
   // Ajout des évenements
  // $(".fform1").submit(function(event) {
