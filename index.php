@@ -175,11 +175,11 @@
           // Affichage différent de la ligne
         }
       
-        echo "<div class=\"input-group mb-3\">\n";
+        echo "<div class=\"input-group\">\n";
         echo $nomCourse;
         echo "<input class=\"form-control\" type=\"text\" value=\"".$nomCourse."\">\n";
         echo "<div class=\"input-group-append\">\n";
-        echo "<input class=\"btn\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
+        echo "<input class=\"btn btn-outline-success\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
         echo "</div>\n";
 
