@@ -3,7 +3,7 @@
 <head>
   <title>Liste des courses</title>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=3, minimal-scale=1, user-scalable=no" />
 
   <!--meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"-->
   
