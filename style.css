@@ -1,6 +1,11 @@
 body {
     min-width: 1000px;
 }
+
+#courses fieldset {
+  width: 400px;
+}
+
 .dform1 p{
   display : block;
 }

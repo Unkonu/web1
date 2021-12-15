@@ -3,7 +3,7 @@
 <head>
   <title>Liste des courses</title>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
   <link rel="stylesheet" href="style.css" />
   
   <!-- include jQuery library --> 
