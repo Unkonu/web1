@@ -32,7 +32,7 @@
 
           $nom = $_POST['nomCourse'];
           
-          if (isset($nom)) {
+          if (!empty($nom)) {
           
           try {      
             //On établit la connexion            
@@ -69,7 +69,7 @@
           
           // parcours du tableau pour récupérer le numéro d'Id
           foreach($_POST as $cle => $valeur) {
-            echo $cle."-".$valeur."\n";
+            echo $cle."-".$valeur."<BR>\n";
           }
           
           try {      
