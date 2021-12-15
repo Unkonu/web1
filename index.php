@@ -134,10 +134,12 @@
 
   <form class="" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
+    <div class="list-group">
     <a href="#" class="list-group-item" >
     <input id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
     <input id="ajouteCourse" type="submit" value="+" />
     </a>
+    </div>
   </form>
   </div>
 
@@ -159,7 +161,7 @@
       
       // Construction de la liste
       echo "<div class=\"container\">\n";
-      echo "<form class=\"list-group\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
+      echo "<form class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
       echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
        
       foreach ($conn->query($requete) as $ligne) {
@@ -172,7 +174,7 @@
           // Affichage différent de la ligne
         }
       
-        echo "<div class=\"row\">\n";
+        echo "<div class=\"list-group row\">\n";
         echo "<label class=\"list-group-item col-6 \">".$nomCourse."</label>";
         echo "<div class=\"col-1\">";
         echo "<input class=\"list-group-item form-control\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
