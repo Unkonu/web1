@@ -23,26 +23,28 @@
   </header>
 
   <?php
-  /* On teste si une nouvelle course a été ajouté */
+  // On teste si une nouvelle course a été ajouté
   
    if (!empty($_POST)) {
    
-      /* echo "Traitement du formulaire method POST <br />"; */
+      // echo "Traitement du formulaire method POST <br />";
     
       $action = $_POST['action'];
 
       switch($action) {
         case "ajout" :
-
-          $nom = $_POST['nomCourse'];
+          
+          if (isset($_POST['nomCourse'])) {
+            $nom = $_POST['nomCourse'];
+          }
           
           if (!empty($nom)) {
           
           try {      
-            /* On établit la connexion */
+            // On établit la connexion
             $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
           
-            /* echo "Connexion OK <br/>"; */
+            // echo "Connexion OK <br/>";
                   
             $requete = "INSERT INTO courses (nom,statut) 
                         VALUES ('$nom',false)";
@@ -68,6 +70,7 @@
         
         case "modif" :
         
+          
           $nom = $_POST['nomCourse'];
           
           // parcours du tableau pour récupérer le numéro d'Id
@@ -129,7 +132,7 @@
   <section>
   
   <div class="courses">
-  <form id="courses" enctype="multipart/form-data" method="post" action="index.php">
+  <form id="courses" class="formAjout" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
     <fieldset>
     <legend>Courses</legend>
