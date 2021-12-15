@@ -176,7 +176,9 @@
         }
       
         echo "<div class=\"input-group mb-3\">\n";
-        echo "<input class=\"input-group-prepend\" type=\"text\" value=\"".$nomCourse."\">\n";
+        echo "<div class=\"input-group-prepend\">\n";
+        echo "<input class=\"\" type=\"text\" value=\"".$nomCourse."\">\n";
+        echo "</div>\n";
         echo "<input class=\"form-control\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
 
