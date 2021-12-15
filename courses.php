@@ -142,9 +142,9 @@
       // echo "Resultats de la requete $requete <br />";
       
       // Construction de la liste
-      echo "<div class=\"listeCourses\"><ul>";
-      echo "<form id=\"liste\" class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"courses.php\">";
-      echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">";
+      echo "<div class=\"listeCourses\"><ul>\n";
+      echo "<form id=\"liste\" class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"courses.php\">\n";
+      echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
 
       foreach ($conn->query($requete) as $ligne) {
       
@@ -163,14 +163,14 @@
 
       }// foreach
 
-      echo "</form>";
+      echo "</form>\n";
       echo "</ul></div>\n";
       
       // Fermeture connexion
       $conn = null;
       
     } catch(PDOException $e) {
-      echo "Erreur : ", $e->getMessage(),"<br />";    
+      echo "Erreur : ", $e->getMessage(),"<br />\n";    
     }// catch
     
       
