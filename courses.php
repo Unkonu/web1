@@ -13,12 +13,9 @@
 </head>
 <body>
   <header>
-  
     <?php
       include 'courses_entete.php';
-    ?>
-  
-  
+    ?>  
   </header>
 
   <?php
@@ -30,14 +27,13 @@
     
       $action = $_POST['action'];
 
-
-      echo $action;
-
       switch($action) {
         case "ajout" :
 
           $nom = $_POST['nomCourse'];
-
+          
+          if (!empty($nom)) {
+          
           try {      
             //On établit la connexion            
             $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
@@ -61,6 +57,8 @@
           } catch(PDOException $e) {
             echo "Erreur : ", $e->getMessage(),"<br />";    
           }// catch
+          
+          }// Fin if
         
         break; // case Ajout
         
