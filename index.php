@@ -175,8 +175,8 @@
         }
       
         echo "<div class=\"form-group row\">\n";
-        echo "<label class=\"col-sm-1 col-form-label\">".$nomCourse."</label>";
-        echo "<div class=\"\">";
+        echo "<label class=\"col-sm-2 col-form-label\">".$nomCourse."</label>";
+        echo "<div class=\"col-sm-1\">";
         echo "<input class=\"form-control\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
         echo "</div>\n";
