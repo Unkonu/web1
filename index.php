@@ -136,9 +136,7 @@
     <input id="action" name="action" type="hidden" value="ajout">
     <div class="input-group mb-3 row">
     
-    <div class="form-control col-6">
     <input class="form-control col-6" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
-    </div>
     
     <div class="input-group-append col-1">
     <input class="btn" id="ajouteCourse" type="submit" value="+" />
