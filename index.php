@@ -136,12 +136,12 @@
     <input id="action" name="action" type="hidden" value="ajout">
     <div class="row">
     
-    <div class="list-group-item col-6">
-    <input id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
+    <div class="col-6">
+    <input class="list-group-item" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
     </div>
     
-    <div class="list-group-item col-1">
-    <input id="ajouteCourse" type="submit" value="+" />
+    <div class="col-1">
+    <input class="list-group-item" id="ajouteCourse" type="submit" value="+" />
     </div>
     
     </div>
