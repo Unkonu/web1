@@ -65,7 +65,6 @@
         case "modif" :
         
           $nom = $_POST['nomCourse'];
-          $idCourse = $_POST['id'];
           
           // parcours du tableau pour récupérer le numéro d'Id
           foreach($_POST as $cle => $valeur) {
@@ -82,29 +81,33 @@
             
           }// Fin foreach
           
-          try {      
-            //On établit la connexion
-            $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
+          if (isset($idCourse)) {
           
-            // echo "Connexion OK <br/>";
-                  
-            $requete = "DELETE FROM courses WHERE id=$idCourse";
+            try {      
+              //On établit la connexion
+              $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
+            
+              // echo "Connexion OK <br/>";
+                    
+              $requete = "DELETE FROM courses WHERE id=$idCourse";
 
-            // echo "Resultats de la requete $requete <br />";
-            
-            if ($conn->exec($requete) === true) {
-            
-              echo "Suppression réussie<br/>";
+              // echo "Resultats de la requete $requete <br />";
+              
+              if ($conn->exec($requete) === true) {
+              
+                echo "Suppression réussie<br/>";
 
-            }// if
-            
-            // Fermeture connexion
-            $conn = null;
-            
-          } catch(PDOException $e) {
-            echo "Erreur : ", $e->getMessage(),"<br />";    
-          }// catch
+              }// if
+              
+              // Fermeture connexion
+              $conn = null;
+              
+            } catch(PDOException $e) {
+              echo "Erreur : ", $e->getMessage(),"<br />";    
+            }// catch
       
+          }// Fin if
+          
         break; // case Modif
         
         default: ;
