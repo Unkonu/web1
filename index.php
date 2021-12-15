@@ -140,7 +140,7 @@
     <input class="col" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
     </div>
     
-    <div class="input-group-appendcol-1">
+    <div class="input-group-append col-1">
     <input class="btn" id="ajouteCourse" type="submit" value="+" />
     </div>
     
