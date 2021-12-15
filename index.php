@@ -172,8 +172,8 @@
           // Affichage différent de la ligne
         }
       
-        echo "<div class=\"list-group row\">\n";
-        echo "<label class=\"list-group-item col-6 col-form-label\">".$nomCourse."</label>";
+        echo "<div class=\"row\">\n";
+        echo "<label class=\"list-group-item col-6 \">".$nomCourse."</label>";
         echo "<div class=\"col-1\">";
         echo "<input class=\"list-group-item form-control\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
