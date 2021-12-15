@@ -70,7 +70,11 @@
           // parcours du tableau pour récupérer le numéro d'Id
           foreach($_POST as $cle => $valeur) {
             echo $cle."-".$valeur."<BR>\n";
-          }
+            
+            if(!empty(strpos(cle,"ligne_")) {
+              echo "ID trouvé<BR>\n";
+            }// Fin if
+          }// Fin foreach
           
           try {      
             //On établit la connexion
