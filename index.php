@@ -137,7 +137,7 @@
     <div class="row">
     
     <div class="list-group-item col-6">
-    <input class="col-6" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
+    <input class="col" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
     </div>
     
     <div class="list-group-item col-1">
