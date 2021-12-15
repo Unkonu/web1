@@ -130,6 +130,19 @@
       
   ?>  
 
+         <div class="container">
+             <h1>Formulaires</h1>
+             <form>
+                 <div class="input-group mb-3">
+                     <div class="input-group-prepend">
+                         <button class="btn btn-outline-info" type="button" id="bouton-texte">Bouton</button>
+                     </div>
+                     <input type="text" class="form-control" placeholder="Input type texte avec bouton" aria-label="Input type texte avec bouton" aria-describedby="bouton-texte">
+                 </div>
+             </form>
+         </div>
+
+
   <section>
   
   <div class="container">
@@ -140,23 +153,7 @@
     <input id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
     <input id="ajouteCourse" type="submit" value="+" />
     </a>
-    
-    
-                 <div class="input-group mb-3">
-                     <div class="input-group-prepend">
-                         <button class="btn btn-outline-info" type="button" id="bouton-texte">Bouton</button>
-                     </div>
-                     <input type="text" class="form-control" placeholder="Input type texte avec bouton" aria-label="Input type texte avec bouton" aria-describedby="bouton-texte">
-                 </div>
-
-                 <div class="input-group mb-3">
-                     <input type="text" class="form-control" placeholder="Autre input de type texte avec bouton" aria-label="Autre input type texte avec bouton" aria-describedby="texte-bouton">
-                     <div class="input-group-append">
-                         <button class="btn btn-outline-success" type="button" id="texte-bouton">Bouton</button>
-                     </div>
-                 </div>
-
-  
+  </form>
   </div>
 
   </section>
