@@ -180,8 +180,7 @@
         }
       
         echo "<div class=\"input-group mb-1 row\">\n";
-        echo "<button onclick=\"this.disabled=true;\" class=\"form-control ml-1\" disabled>".$nomCourse."</button>";
-        echo "<label onclick=\"this.disabled=true;\" class=\"form-control ml-1\" disabled>".$nomCourse."</label>";
+        echo "<button onclick=\"this.disabled=true;\" class=\"form-control ml-1\">".$nomCourse."</button>";
         echo "<div class=\"input-group-append col-2\">";
         echo "<input class=\"btn col-1\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "<input class=\"btn ml-1 col-1\" name=\"ligne_$ligneId\" type=\"submit\" value=\"ok\">\n"; 
