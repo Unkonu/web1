@@ -32,7 +32,7 @@
 
           $nom = $_POST['nomCourse'];
           
-          if (!empty($nom)) {
+          if (isset($nom)) {
           
           try {      
             //On établit la connexion            
