@@ -132,14 +132,16 @@
 
   <section>
   
-  <div class="courses">
-  <form id="courses" class="formAjout" enctype="multipart/form-data" method="post" action="index.php">
+  <div class="container">
+  <form class="formAjout" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
     <fieldset>
-    <legend><a class="list-group-item" >Courses</a></legend>
+    <legend><a href="#" class="list-group-item" >Courses</legend>
       <label for="nomCourse"></label>
+      <a href="#" class="list-group-item" >
       <input id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
       <input id="ajouteCourse" type="submit" value="+" />
+      </a>
     </fieldset>
   </form>
   
@@ -162,7 +164,7 @@
       // echo "Resultats de la requete $requete <br />";
       
       // Construction de la liste
-      echo "<form id=\"liste\" class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
+      echo "<form class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
       echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
       echo "<div class=\"\">\n";
       // echo "<ul class=\"list-group\">\n";
