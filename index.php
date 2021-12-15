@@ -183,6 +183,7 @@
       }// foreach
  
       echo "</form>\n";
+      echo "</div>\n";
       
       // Fermeture connexion
       $conn = null;
