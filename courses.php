@@ -69,13 +69,19 @@
           
           // parcours du tableau pour récupérer le numéro d'Id
           foreach($_POST as $cle => $valeur) {
+          
             echo $cle."-".$valeur."<BR>\n";
             
             $position = strpos($cle,"ligne_");
             
             if($position == 0) {
-              echo "ID trouvé<BR>\n";
+            
+              $elements = explode("_", $cle);
+              $idCourse = $elements[1];
+                            
+              echo "ID trouvé : $idCourse<BR>\n";
             }// Fin if
+            
           }// Fin foreach
           
           try {      
