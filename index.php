@@ -176,12 +176,11 @@
         }
       
         echo "<div class=\"input-group mb-3\">\n";
-        echo "<div class=\"input-group-prepend\">\n";
         echo $nomCourse;
-        echo "<input class=\"\" type=\"text\" value=\"".$nomCourse."\">\n";
+        echo "<input class=\"form-control\" type=\"text\" value=\"".$nomCourse."\">\n";
+        echo "<div class=\"input-group-append\">\n";
+        echo "<input class=\"form-control\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
-        echo "<button class=\"btn btn-outline-success\" name=\"ligne_$ligneId\" type=\"button\" value=\"-\">\n"; 
-        echo "<input class=\"\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
 
       }// foreach
