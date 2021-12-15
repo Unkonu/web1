@@ -2,27 +2,4 @@ body {
     min-width: 1000px;
 }
 
-#courses fieldset {
-  width: 400px;
-}
-
-.dform1 p{
-  display : block;
-}
-
-#fform1 p label {
-  display: inline-table;  
-  width: 100px;
-}
-
-#fform1 p input {
-  display: inline;  
-  margin : 2px;
-}
-
-
-#formModif {
-  display: inline-table;  
-  width: 100px;
-}
 
