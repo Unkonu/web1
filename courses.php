@@ -48,7 +48,7 @@
             
             echo "mysql:host=".NOM_SERVEUR."dbname=".NOM_BASE;
             
-            $conn = new PDO("mysql:host=".NOM_SERVEUR."dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
+            $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
           
             // echo "Connexion OK <br/>";
                   
