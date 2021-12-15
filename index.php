@@ -128,7 +128,7 @@
 
   <section>
   
-  <div class="container swatch-blue">
+  <div class="container">
 
   
     <a href="index.php" class=""><h2>Courses</h2></a>
@@ -182,8 +182,8 @@
         echo "<div class=\"input-group mb-1 row swatch-blue\">\n";
         echo "<a onclick=\"initElement(this);\" class=\"form-control ml-1\">".$nomCourse."</a>";
         echo "<div class=\"input-group-append col-2\">";
-        echo "<input class=\"btn col-1\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
-        echo "<input class=\"btn ml-1 col-1\" name=\"ligne_$ligneId\" type=\"submit\" value=\"ok\">\n"; 
+        echo "<input class=\"btn col-1 swatch-blue\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
+        echo "<input class=\"btn ml-1 col-1 swatch-blue\" name=\"ligne_$ligneId\" type=\"submit\" value=\"ok\">\n"; 
         echo "</div>\n";
         echo "</div>\n";
 
