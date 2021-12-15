@@ -72,7 +72,7 @@
           
             echo $cle."-".$valeur."<BR>\n";
                         
-            if(str_contains($cle,"ligne_")) {
+            if(!empty(strstr($cle,"ligne_"))) {
             
               $elements = explode("_", $cle);
               $idCourse = $elements[1];
