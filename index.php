@@ -137,11 +137,11 @@
     <div class="row">
     
     <div class="list-group-item col-6">
-    <input class="" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
+    <input class="col-6" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
     </div>
     
     <div class="list-group-item col-1">
-    <input class="" id="ajouteCourse" type="submit" value="+" />
+    <input class="col-1" id="ajouteCourse" type="submit" value="+" />
     </div>
     
     </div>
