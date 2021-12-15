@@ -71,7 +71,7 @@
           foreach($_POST as $cle => $valeur) {
             echo $cle."-".$valeur."<BR>\n";
             
-            if(!empty(strpos(cle,"ligne_"))) {
+            if(!empty(strpos($cle,"ligne_"))) {
               echo "ID trouvé<BR>\n";
             }// Fin if
           }// Fin foreach
