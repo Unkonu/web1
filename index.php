@@ -3,7 +3,10 @@
 <head>
   <title>Liste des courses</title>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-scale=1, user-scalable=no" />
+  <!--meta name="viewport" content="width=device-width, initial-scale=1, minimal-scale=1, user-scalable=no" /-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <link rel="stylesheet" href="style.css" />
   
   <!-- Latest compiled and minified CSS -->
@@ -13,8 +16,7 @@
 
   <!-- include jQuery library --> 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> 
-
-   
+ 
   <script src="index.js"></script>
 
 </head>
@@ -130,19 +132,6 @@
       
   ?>  
 
-         <div class="container">
-             <h1>Formulaires</h1>
-             <form>
-                 <div class="input-group mb-3">
-                     <div class="input-group-prepend">
-                         <button class="btn btn-outline-info" type="button" id="bouton-texte">Bouton</button>
-                     </div>
-                     <input type="text" class="form-control" placeholder="Input type texte avec bouton" aria-label="Input type texte avec bouton" aria-describedby="bouton-texte">
-                 </div>
-             </form>
-         </div>
-
-
   <section>
   
   <div class="container">
@@ -187,12 +176,9 @@
           // Affichage différent de la ligne
         }
       
-        echo "<div class=\"input-group\">\n";
+        echo "<div class=\"\">\n";
         echo $nomCourse;
-        echo "<input class=\"form-control\" type=\"text\" value=\"".$nomCourse."\">\n";
-        echo "<div class=\"input-group-append\">\n";
-        echo "<input class=\"btn btn-outline-success\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
-        echo "</div>\n";
+        echo "<input class=\"\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
 
       }// foreach
