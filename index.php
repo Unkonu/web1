@@ -183,6 +183,7 @@
         echo "<label class=\"form-control ml-1 \">".$nomCourse."</label>";
         echo "<div class=\"input-group-append col-1\">";
         echo "<input class=\"btn\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
+        echo "<input class=\"btn\" name=\"ligne_$ligneId\" type=\"submit\" value=\"ok\">\n"; 
         echo "</div>\n";
         echo "</div>\n";
 
