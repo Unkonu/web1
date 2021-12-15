@@ -176,11 +176,8 @@
           // Affichage différent de la ligne
         }
       
-        echo "<a href=\"#\" class=\"list-group list-group-horizontal\">";
-        echo "<ul class=\"\">\n";
-        echo "<li class=\"list-group-item\">".$nomCourse."</li>\n";
-        echo "<li class=\"list-group-item\"><input name=\"ligne_$ligneId\" type=\"submit\" value=\"-\"></li>\n"; 
-        echo "</ul>\n";
+        echo "<a href=\"#\" class=\"list-group-item\">".$nomCourse."\n";
+        echo "<input name=\"ligne_$ligneId\" type=\"submit\" value=\"-\"></li>\n"; 
         echo "</a>\n";
 
       }// foreach
