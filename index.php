@@ -136,11 +136,11 @@
     <input id="action" name="action" type="hidden" value="ajout">
     <div class="row">
     
-    <div class="list-group-item col-6">
+    <div class="col-6">
     <input class="col" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
     </div>
     
-    <div class="list-group-item col-1">
+    <div class="col-1">
     <input class="col-1" id="ajouteCourse" type="submit" value="+" />
     </div>
     
@@ -181,8 +181,8 @@
         }
       
         echo "<div class=\"row\">\n";
-        echo "<label class=\"list-group-item col-6 \">".$nomCourse."</label>";
-        echo "<div class=\"list-group-item col-1\">";
+        echo "<label class=\"col-6 \">".$nomCourse."</label>";
+        echo "<div class=\"col-1\">";
         echo "<input class=\"\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
         echo "</div>\n";
