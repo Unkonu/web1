@@ -173,7 +173,7 @@
           // Affichage différent de la ligne
         }
       
-        echo "<li class=\"list-group-item\">";
+        echo "<li class=\"list-group-item list-group-item-action\">";
         echo $nomCourse;
         echo "<input name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">"; 
         echo "</li>\n";
