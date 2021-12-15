@@ -85,7 +85,8 @@
           
             try {      
               //On établit la connexion
-              $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
+              $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, 
+                              UTILISATEUR, MOTDEPASSE);
             
               // echo "Connexion OK <br/>";
                     
