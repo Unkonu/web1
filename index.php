@@ -133,7 +133,7 @@
 
   <section>
   
-  <div class="courses">
+  <div class="container courses">
   <form id="courses" class="formAjout" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
     <fieldset>
