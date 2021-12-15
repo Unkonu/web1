@@ -205,6 +205,16 @@
     function initElement(element)
     {
       console.log(element.classList);
+      
+      if(element.classList.contains("bg-primary")) {
+        element.classList.remove("bg-primary");
+        element.classList.add("bg-warning");
+      } else {
+        element.classList.remove("bg-warning");
+        element.classList.add("bg-primary");
+      }// Fin if
+      
+      console.log(element.classList);
     }
   </script>
   
