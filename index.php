@@ -175,7 +175,7 @@
           // Affichage différent de la ligne
         }
       
-        echo "<div class=\"container form-inline\">\n";
+        echo "<div class=\"form-row\">\n";
         echo "<label class=\"mr-2\">".$nomCourse."</label>\n";
         echo "<input class=\"form-control\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
