@@ -174,10 +174,10 @@
           // Affichage différent de la ligne
         }
       
-        echo "<a href=\"#\" class=\"list-group-horizontal list-group-item\">\n";
+        echo "<a href=\"#\" class=\"list-group-horizontal\">\n";
         echo $nomCourse;
         echo "</a>\n";
-        echo "<a href=\"#\" class=\"list-group-horizontal list-group-item\">\n";
+        echo "<a href=\"#\" class=\"list-group-horizontal\">\n";
         echo "<input name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">"; 
         echo "</a>\n";
 
