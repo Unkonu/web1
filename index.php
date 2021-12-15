@@ -180,7 +180,7 @@
         }
       
         echo "<div class=\"input-group mb-1 row\">\n";
-        echo "<a onclick=\"initElement(this);\" class=\"form-control ml-1 light\">".$nomCourse."</a>";
+        echo "<a onclick=\"initElement(this);\" class=\"form-control ml-1 dark\">".$nomCourse."</a>";
         echo "<div class=\"input-group-append col-2\">";
         echo "<input class=\"btn col-1\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "<input class=\"btn ml-1 col-1\" name=\"ligne_$ligneId\" type=\"submit\" value=\"ok\">\n"; 
