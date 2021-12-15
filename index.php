@@ -177,7 +177,7 @@
         echo "<div class=\"row\">\n";
         echo "<label class=\"list-group-item col-6 \">".$nomCourse."</label>";
         echo "<div class=\"col-1\">";
-        echo "<input class=\"form-control\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
+        echo "<input class=\"list-group-item\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
         echo "</div>\n";
 
