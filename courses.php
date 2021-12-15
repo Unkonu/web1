@@ -66,7 +66,12 @@
         
           $nom = $_POST['nomCourse'];
           $idCourse = $_POST['id'];
-           
+          
+          // parcours du tableau pour récupérer le numéro d'Id
+          foreach($_POST in $cle => $valeur) {
+            echo $cle."-".$valeur."\n";
+          }
+          
           try {      
             //On établit la connexion
             $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
