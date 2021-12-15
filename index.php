@@ -163,7 +163,7 @@
       // echo "Resultats de la requete $requete <br />";
       
       // Construction de la liste
-      echo "<div class=\"container\">\n";
+      echo "<div class=\"\">\n";
       echo "<form id=\"liste\" class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
       echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
       echo "<ul class=\"list-group\">\n";
