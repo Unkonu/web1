@@ -139,8 +139,8 @@
     
     <input class="form-control ml-1" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
     
-    <div class="input-group-append">
-    <input class="btn col-2" id="ajouteCourse" type="submit" value="+" />
+    <div class="input-group-append col-2">
+    <input class="btn" id="ajouteCourse" type="submit" value="+" />
     </div>
     
     </div>
