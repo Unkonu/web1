@@ -3,9 +3,7 @@
 <head>
   <title>Liste des courses</title>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-scale=1, user-scalable=yes" />
-
-  <!--meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-scale=1, user-scalable=no"/>
   
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -174,9 +172,9 @@
           // Affichage différent de la ligne
         }
       
-        echo "<div class=\"form-group row\">\n";
-        echo "<label class=\"col-6 col-form-label\">".$nomCourse."</label>";
-        echo "<div class=\"col-1\">";
+        echo "<div class=\"list-group row\">\n";
+        echo "<label class=\"list-group-item col-6 col-form-label\">".$nomCourse."</label>";
+        echo "<div class=\"list-group-item col-1\">";
         echo "<input class=\"form-control\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
         echo "</div>\n";
