@@ -13,6 +13,12 @@
 </head>
 <body>
   <header>
+  
+    <?php
+      include 'courses_entete.php';
+    ?>
+  
+  
   </header>
 
   <?php
@@ -188,7 +194,9 @@
   </section>
   
   <footer>
-  
+    <?php
+      include 'courses_pied.php';
+    ?>  
   </footer>
   
 </body>
