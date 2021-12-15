@@ -135,14 +135,11 @@
   <div class="container">
   <form class="formAjout" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
-    <fieldset>
-    <legend><a href="#" class="list-group-item" >Courses</legend>
-      <label for="nomCourse"></label>
-      <a href="#" class="list-group-item" >
-      <input id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
-      <input id="ajouteCourse" type="submit" value="+" />
-      </a>
-    </fieldset>
+    <a href="index.php" class="list-group-item" >Courses</a>
+    <a href="#" class="list-group-item" >
+    <input id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
+    <input id="ajouteCourse" type="submit" value="+" />
+    </a>
   </form>
   
   </div>
@@ -166,7 +163,7 @@
       // Construction de la liste
       echo "<form class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
       echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
-      echo "<div class=\"\">\n";
+      echo "<div class=\"container\">\n";
       // echo "<ul class=\"list-group\">\n";
       foreach ($conn->query($requete) as $ligne) {
       
