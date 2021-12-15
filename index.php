@@ -159,7 +159,7 @@
       // echo "Resultats de la requete $requete <br />";
       
       // Construction de la liste
-      echo "<div class=\"listeCourses\"><ul>\n";
+      echo "<div class=\"listeCourses\"><ul class=\"list-group\">\n";
       echo "<form id=\"liste\" class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
       echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
 
@@ -173,7 +173,7 @@
           // Affichage différent de la ligne
         }
       
-        echo "<li>";
+        echo "<li class=\"list-group-item\">";
         echo $nomCourse;
         echo "<input name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">"; 
         echo "</li>\n";
