@@ -182,8 +182,8 @@
         echo "<div class=\"input-group mb-1 row\">\n";
         echo "<label class=\"form-control ml-1\">".$nomCourse."</label>";
         echo "<div class=\"input-group-append col-2\">";
-        echo "<input class=\"btn\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
-        echo "<input class=\"btn ml-1\" name=\"ligne_$ligneId\" type=\"submit\" value=\"ok\">\n"; 
+        echo "<input class=\"btn col-1\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
+        echo "<input class=\"btn ml-1 col-1\" name=\"ligne_$ligneId\" type=\"submit\" value=\"ok\">\n"; 
         echo "</div>\n";
         echo "</div>\n";
 
