@@ -159,10 +159,10 @@
       // echo "Resultats de la requete $requete <br />";
       
       // Construction de la liste
-      echo "<div class=\"listeCourses\"><ul class=\"list-group\">\n";
+      echo "<div class=\"listeCourses\">\n";
       echo "<form id=\"liste\" class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
       echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
-
+      echo "<ul class=\"list-group\">\n";
       foreach ($conn->query($requete) as $ligne) {
       
         $ligneId = $ligne['id'];
@@ -179,9 +179,8 @@
         echo "</li>\n";
 
       }// foreach
-
-      echo "</form>\n";
-      echo "</ul></div>\n";
+      echo "</ul>\n";
+      echo "</form></div>\n";
       
       // Fermeture connexion
       $conn = null;
