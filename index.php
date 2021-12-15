@@ -130,7 +130,7 @@
   
   <div class="container">
 
-  <a href="index.php" class="" ><h1>Courses</h1></a>
+  <a href="index.php" class="badge" ><h1>Courses</h1></a>
 
   <form class="" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
