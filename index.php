@@ -131,7 +131,7 @@
   <div class="container">
 
   
-    <a href="index.php" class=""><h3>Liste courses</h3></a>
+    <a href="index.php" class=""><h4>Liste courses</h4></a>
 
   <form class="" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
