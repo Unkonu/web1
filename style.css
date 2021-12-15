@@ -1,4 +1,6 @@
-
+body {
+    min-width: 1000px;
+}
 .dform1 p{
   display : block;
 }
