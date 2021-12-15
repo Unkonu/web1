@@ -126,7 +126,7 @@
   <section>
   
   <div class="courses">
-  <form id="courses" enctype="multipart/form-data" method="post" action="courses.php">
+  <form id="courses" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
     <fieldset>
     <legend>Courses</legend>
@@ -157,7 +157,7 @@
       
       // Construction de la liste
       echo "<div class=\"listeCourses\"><ul>\n";
-      echo "<form id=\"liste\" class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"courses.php\">\n";
+      echo "<form id=\"liste\" class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
       echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
 
       foreach ($conn->query($requete) as $ligne) {
