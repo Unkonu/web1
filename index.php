@@ -137,7 +137,7 @@
     <div class="input-group mb-3 row">
     
     <div class="form-control col-6">
-    <input class="col" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
+    <input class="form-control col-6" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
     </div>
     
     <div class="input-group-append col-1">
@@ -181,7 +181,7 @@
         }
       
         echo "<div class=\"input-group row\">\n";
-        echo "<label class=\"form-control col-6 \">".$nomCourse."</label>";
+        echo "<label class=\"form-control col-6\">".$nomCourse."</label>";
         echo "<div class=\"input-group-append col-1\">";
         echo "<input class=\"btn\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
