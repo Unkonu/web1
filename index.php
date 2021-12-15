@@ -135,7 +135,7 @@
   <form class="" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
     <fieldset>
-    <legend><a href="index.php" class="">Liste courses</a></legend>
+    <legend>test <a href="index.php" class="">Liste courses</a></legend>
     <div class="input-group mb-3 row">
     
     <input class="form-control ml-1" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
