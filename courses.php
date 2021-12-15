@@ -37,17 +37,9 @@
         case "ajout" :
 
           $nom = $_POST['nomCourse'];
-           /*
-          $servername = 'localhost';
-          $username = 'devsql1';
-          $password = 'devsql1';
-          $nom_base = 'base_courses';
-        */
+
           try {      
-            //On établit la connexion
-            
-            echo "mysql:host=".NOM_SERVEUR."dbname=".NOM_BASE;
-            
+            //On établit la connexion            
             $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
           
             // echo "Connexion OK <br/>";
@@ -77,14 +69,9 @@
           $nom = $_POST['nomCourse'];
           $idCourse = $_POST['id'];
            
-          $servername = 'localhost';
-          $username = 'devsql1';
-          $password = 'devsql1';
-          $nom_base = 'base_courses';
-        
           try {      
             //On établit la connexion
-            $conn = new PDO("mysql:host=$servername;dbname=$nom_base", $username, $password);
+            $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
           
             // echo "Connexion OK <br/>";
                   
@@ -107,8 +94,7 @@
       
         break; // case Modif
         
-        default:
-          echo("<p>Le Formulaire n'a pas &eacute;t&eacute; rempli");
+        default: ;
       
       }// fin switch
        
@@ -116,7 +102,7 @@
    
       echo("<p>Le Formulaire n'a pas &eacute;t&eacute; rempli");
 
-    }
+    }// Fin if
       
   ?>  
 
@@ -141,15 +127,10 @@
   <section>
   
   <?php
-  
-    $servername = 'localhost';
-    $username = 'devsql1';
-    $password = 'devsql1';
-    $nom_base = 'base_courses';
-    
+      
     try {      
       //On établit la connexion
-      $conn = new PDO("mysql:host=$servername;dbname=$nom_base", $username, $password);
+      $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
     
       // echo "Connexion OK <br/>";
             
