@@ -163,10 +163,10 @@
       // echo "Resultats de la requete $requete <br />";
       
       // Construction de la liste
-      echo "<div class=\"\">\n";
       echo "<form id=\"liste\" class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
       echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
-      echo "<ul class=\"list-group\">\n";
+      echo "<div class=\"\">\n";
+      // echo "<ul class=\"list-group\">\n";
       foreach ($conn->query($requete) as $ligne) {
       
         $ligneId = $ligne['id'];
@@ -177,14 +177,14 @@
           // Affichage différent de la ligne
         }
       
-        echo "<li class=\"list-group-item\">";
+        echo "<a href=\"#\" class=\"list-group-item list-group-item-action\">"
         echo $nomCourse;
+        echo "</a>\n";
         echo "<input name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">"; 
-        echo "</li>\n";
 
       }// foreach
-      echo "</ul>\n";
-      echo "</form></div>\n";
+      echo "</div>\n";
+      echo "</form>\n";
       
       // Fermeture connexion
       $conn = null;
