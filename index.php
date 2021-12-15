@@ -180,10 +180,10 @@
           // Affichage différent de la ligne
         }
       
-        echo "<div class=\"row\">\n";
-        echo "<label class=\"col-6 \">".$nomCourse."</label>";
+        echo "<div class=\"input-group mb-3 row\">\n";
+        echo "<label class=\"input-group-prepend col-6 \">".$nomCourse."</label>";
         echo "<div class=\"col-1\">";
-        echo "<input class=\"\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
+        echo "<input class=\"form-control\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
         echo "</div>\n";
 
