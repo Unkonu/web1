@@ -9,6 +9,8 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+
   <!-- include jQuery library --> 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> 
   
@@ -175,8 +177,8 @@
       
         echo "<li class=\"list-group-item\">";
         echo $nomCourse;
-        echo "</li>\n";
         echo "<input name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">"; 
+        echo "</li>\n";
 
       }// foreach
       echo "</ul>\n";
