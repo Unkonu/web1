@@ -37,15 +37,15 @@
         case "ajout" :
 
           $nom = $_POST['nomCourse'];
-           
+           /*
           $servername = 'localhost';
           $username = 'devsql1';
           $password = 'devsql1';
           $nom_base = 'base_courses';
-        
+        */
           try {      
             //On établit la connexion
-            $conn = new PDO("mysql:host=$servername;dbname=$nom_base", $username, $password);
+            $conn = new PDO("mysql:host=".NOM_SERVEUR."dbname=".NOM_BASE", UTILISATEUR, MOTEDEPASSE);
           
             // echo "Connexion OK <br/>";
                   
