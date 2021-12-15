@@ -139,7 +139,6 @@
     <legend>Courses</legend>
       <label for="nomCourse"></label>
       <input id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
-
       <input id="ajouteCourse" type="submit" value="+" />
     </fieldset>
   </form>
@@ -179,8 +178,8 @@
       
         echo "<a href=\"#\" class=\"list-group-item list-group-item-action\">\n";
         echo $nomCourse;
-        echo "</a>\n";
         echo "<input name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">"; 
+        echo "</a>\n";
 
       }// foreach
       echo "</div>\n";
