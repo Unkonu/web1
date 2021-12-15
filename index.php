@@ -131,9 +131,11 @@
   <section>
   
   <div class="container">
+
+  <a href="index.php" class="" ><h1>Courses</h1></a>
+
   <form class="" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
-    <a href="index.php" class="" ><h1>Courses</h1></a>
     <a href="#" class="list-group-item" >
     <input id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
     <input id="ajouteCourse" type="submit" value="+" />
