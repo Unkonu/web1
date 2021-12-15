@@ -36,8 +36,6 @@
           
           if (isset($_POST['nomCourse'])) {
             $nom = $_POST['nomCourse'];
-          } else {
-            echo "Course vide<br/>\n";
           }
           
           if (!empty($nom)) {
@@ -71,10 +69,7 @@
         break; // case Ajout
         
         case "modif" :
-        
-          
-          $nom = $_POST['nomCourse'];
-          
+                   
           // parcours du tableau pour récupérer le numéro d'Id
           foreach($_POST as $cle => $valeur) {
           
