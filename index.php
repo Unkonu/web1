@@ -134,7 +134,7 @@
 
   <form class="" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
-    <div class="input-group ml-1 mb-3 row">
+    <div class="input-group mb-3 row">
     
     <input class="form-control" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
     
@@ -178,8 +178,8 @@
           // Affichage différent de la ligne
         }
       
-        echo "<div class=\"input-group ml-1 mb-1 row\">\n";
-        echo "<label class=\"form-control\">".$nomCourse."</label>";
+        echo "<div class=\"input-group mb-1 row\">\n";
+        echo "<label class=\"form-control ml-1 \">".$nomCourse."</label>";
         echo "<div class=\"input-group-append col-1\">";
         echo "<input class=\"btn\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
