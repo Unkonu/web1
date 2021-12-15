@@ -36,6 +36,8 @@
           
           if (isset($_POST['nomCourse'])) {
             $nom = $_POST['nomCourse'];
+          } else {
+            echo "Course vide<br/>\n";
           }
           
           if (!empty($nom)) {
