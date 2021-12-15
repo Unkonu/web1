@@ -71,10 +71,8 @@
           foreach($_POST as $cle => $valeur) {
           
             echo $cle."-".$valeur."<BR>\n";
-            
-            $position = strpos($cle,"ligne_");
-            
-            if($position == 0) {
+                        
+            if(str_contains($cle,"ligne_")) {
             
               $elements = explode("_", $cle);
               $idCourse = $elements[1];
