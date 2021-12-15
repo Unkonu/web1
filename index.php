@@ -164,7 +164,7 @@
       echo "<div class=\"container\">\n";
       echo "<form class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
       echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
-      echo "<div class=\"list-group list-group-horizontal\">\n";
+      echo "<div class=\"list-group\">\n";
       
       foreach ($conn->query($requete) as $ligne) {
       
@@ -176,10 +176,10 @@
           // Affichage différent de la ligne
         }
       
-        echo "<a href=\"#\" class=\"list-group-item list-group-item-action\">";
+        echo "<a href=\"#\" class=\"\">";
         echo "<ul class=\"list-group list-group-horizontal\">\n";
-        echo "<li class=\"list-group-item list-group-item-action\">".$nomCourse."</li>\n";
-        echo "<li class=\"list-group-item list-group-item-action\"><input name=\"ligne_$ligneId\" type=\"submit\" value=\"-\"></li>\n"; 
+        echo "<li class=\"list-group-item\">".$nomCourse."</li>\n";
+        echo "<li class=\"list-group-item\"><input name=\"ligne_$ligneId\" type=\"submit\" value=\"-\"></li>\n"; 
         echo "</ul>\n";
         echo "</a>\n";
 
