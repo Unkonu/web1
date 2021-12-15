@@ -133,7 +133,7 @@
 
   <section>
   
-  <div class="container courses">
+  <div class="courses">
   <form id="courses" class="formAjout" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
     <fieldset>
@@ -164,7 +164,7 @@
       // echo "Resultats de la requete $requete <br />";
       
       // Construction de la liste
-      echo "<div class=\"listeCourses\">\n";
+      echo "<div class=\"container\">\n";
       echo "<form id=\"liste\" class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
       echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
       echo "<ul class=\"list-group\">\n";
