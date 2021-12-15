@@ -134,7 +134,7 @@
 
   <form class="" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
-    <div class="input-group mb-3 row">
+    <div class="input-group mb-1 row">
     
     <input class="form-control" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
     
