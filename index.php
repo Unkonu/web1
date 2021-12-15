@@ -162,10 +162,9 @@
       
       // Construction de la liste
       echo "<div class=\"container\">\n";
-      echo "<form class=\"formModif\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
+      echo "<form class=\"form-inline\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
       echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
-      echo "<div class=\"input-group\">\n";
-      
+       
       foreach ($conn->query($requete) as $ligne) {
       
         $ligneId = $ligne['id'];
@@ -176,12 +175,13 @@
           // Affichage différent de la ligne
         }
       
-        echo "<a href=\"#\" class=\"input-group-text\">".$nomCourse."\n";
-        echo "<input class=\"form-control\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\"></li>\n"; 
-        echo "</a>\n";
+        echo "<div class=\"form-group\">\n";
+        echo "<label class=\"mr-2\">".$nomCourse."</label>\n";
+        echo "<input class=\"form-control\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
+        echo "</div>\n";
 
       }// foreach
-      echo "</div>\n";
+ 
       echo "</form>\n";
       
       // Fermeture connexion
