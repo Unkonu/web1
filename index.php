@@ -139,8 +139,8 @@
     
     <input class="form-control ml-1" id="nomCourse" name="nomCourse" type="text" value="" autofocus/>
     
-    <div class="input-group-append col-2">
-    <input class="btn" id="ajouteCourse" type="submit" value="(+)" />
+    <div class="input-group-append col-1">
+    <input class="btn" id="ajouteCourse" type="submit" value="+" />
     </div>
     
     </div>
@@ -181,9 +181,8 @@
       
         echo "<div class=\"input-group mb-1 row swatch-blue\">\n";
         echo "<a onclick=\"initElement(this);\" class=\"form-control ml-1\">".$nomCourse."</a>";
-        echo "<div class=\"input-group-append col-2\">";
+        echo "<div class=\"input-group-append col-1\">";
         echo "<input class=\"btn col-1 swatch-blue\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
-        echo "<input class=\"btn ml-1 col-1 swatch-blue\" name=\"ligne_$ligneId\" type=\"submit\" value=\"ok\">\n"; 
         echo "</div>\n";
         echo "</div>\n";
 
