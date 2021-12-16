@@ -165,10 +165,10 @@
   <?php
 
     // Construction de la liste
+    echo "<div class=\"overflowTest\" style=\"max-width: 260px; max-height: 500px;\">\n";
     echo "<div class=\"container\" >\n";
     echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
-    echo "<div class=\"overflow-auto\" style=\"max-width: 260px; max-height: 500px;\">\n";
       
     try {      
       //On établit la connexion
@@ -209,11 +209,10 @@
       echo "Erreur : ", $e->getMessage(),"<br />\n";    
     }// catch
 
-    echo "</div>\n";
     
     echo "</form>\n";
     echo "</div>\n";
-  
+    echo "</div>\n";
       
   ?>
   
