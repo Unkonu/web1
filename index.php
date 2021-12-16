@@ -181,7 +181,7 @@
         }
             
         echo "<div class=\"input-group mb-1 row\">\n";
-        echo "<input type=\"submit\" onclick=\"initElement(this);\" class=\"form-control ml-1 ".$couleurElement."\" name=\"ligne_".$ligneId."_".$statut."\" value=\"".$nomCourse."\" />\n";
+        echo "<input type=\"submit\" class=\"form-control ml-1 ".$couleurElement."\" name=\"ligne_".$ligneId."_".$statut."\" value=\"".$nomCourse."\" />\n";
         echo "<div class=\"input-group-append col-1\">\n";
         echo "<input class=\"btn col-1 swatch-blue\" name=\"ligne_".$ligneId."_".$statut."\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
