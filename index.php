@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimal-scale=1, user-scalable=no"/>
   
-  <link rel="stylesheet" href="style.css">
 
   
   <!-- Latest compiled and minified CSS -->
@@ -14,6 +13,8 @@
   <!-- include jQuery library --> 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> 
 
+
+  <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
