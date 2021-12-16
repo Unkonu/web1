@@ -140,7 +140,7 @@
 
   <section>
   
-  <div class="container row-15">
+  <div class="container overflowTest">
 
     <a href="index.php" class=""><h2>Courses</h2></a>
 

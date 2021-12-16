@@ -8,12 +8,8 @@
   overflow: scroll;
   border: 1px solid #ccc;
 }
+
 #overflowTest {
-  background: #4CAF50;
-  color: black;
-  padding: 15px;
-  width: 50%;
-  height: 100px;
   overflow: scroll;
   border: 1px solid #ccc;
 }
