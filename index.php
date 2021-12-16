@@ -158,7 +158,7 @@
 
   </section>
   
-  <section class="overflow-auto">
+  <section id="overflow-auto">
   
   <?php
 
