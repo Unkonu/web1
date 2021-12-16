@@ -163,7 +163,7 @@
   <?php
 
     // Construction de la liste
-    echo "<div width=400 class=\"container row-6 overflow-auto\">\n";
+    echo "<div class=\"row-6 overflow-auto\">\n";
     echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
       
