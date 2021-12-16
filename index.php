@@ -91,10 +91,10 @@
             
               // echo "Connexion OK <br/>";
               if ($type == "modif") {
-                if ($statutCourse == 0) {
-                  $statutBD = false;
+                if ($statutCourse == 1) {
+                  $statutBD = 0;
                 } else {
-                  $statutBD = true;                
+                  $statutBD = 1;                
                 }
                 
                 $requete = "UPDATE courses 
@@ -184,7 +184,7 @@
         $statut = $ligne['statut'];
       
         // Affichage différent de la ligne selon statut
-        if ($statut) {
+        if ($statut == 1) {
           $couleurElement = "bg-primary";
         } else {
           $couleurElement = "bg-warning";
