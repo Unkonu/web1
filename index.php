@@ -133,7 +133,7 @@
   
     <a href="index.php" class=""><h2>Courses</h2></a>
 
-  <form class="" enctype="multipart/form-data" method="post" action="index.php">
+  <form class="" name="ajout" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
     <div class="input-group mb-3 row">
     
@@ -166,7 +166,7 @@
       
       // Construction de la liste
       echo "<div class=\"container\">\n";
-      echo "<form class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
+      echo "<form name=\"action\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
       echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
        
       foreach ($conn->query($requete) as $ligne) {
@@ -216,6 +216,11 @@
         element.classList.remove("bg-warning");
         element.classList.add("bg-primary");
       }// Fin if
+      
+      alert("soumission du formulaire");
+
+      document.forms["action"].submit();
+      
       
       // console.log(element.classList);
     }
