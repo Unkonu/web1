@@ -173,7 +173,7 @@
     
       // echo "Connexion OK <br/>";
             
-      $requete = "SELECT * FROM courses ORDER BY id, INC statut";
+      $requete = "SELECT * FROM courses ORDER BY id,statut";
 
       // echo "Resultats de la requete $requete <br />";
              
