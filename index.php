@@ -168,7 +168,7 @@
     echo "<div class=\"container row-10 overflowTest\">\n";
     echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
-    echo "<div class=\"row-5\">\n";
+    echo "<div class=\"row-15 overflowTest\">\n";
       
     try {      
       //On établit la connexion
