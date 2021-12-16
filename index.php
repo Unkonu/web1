@@ -163,9 +163,10 @@
   <?php
 
     // Construction de la liste
-    echo "<div class=\"container overflow-auto\">\n";
+    echo "<div class=\"container\">\n";
     echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
+    echo "<div class=\"overflow-auto\">\n";
       
     try {      
       //On établit la connexion
@@ -205,6 +206,8 @@
     } catch(PDOException $e) {
       echo "Erreur : ", $e->getMessage(),"<br />\n";    
     }// catch
+
+    echo "</div>\n";
     
     echo "</form>\n";
     echo "</div>\n";
