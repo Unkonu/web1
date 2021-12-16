@@ -75,7 +75,10 @@
               $elements = explode("_", $cle);
               $type = $elements[0];
               $idCourse = $elements[1];
-              $statutCourse = $elements[2];             
+              $statutCourse = $elements[2];
+              
+              echo $type."_".$idCourse."_".$statutCourse."\n";
+                         
             }// Fin if
             
           }// Fin foreach
