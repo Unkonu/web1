@@ -141,7 +141,7 @@
   
   <div class="container">
 
-    <a href="index.php" class=""><h2>Courses</h2></a>
+    <a href="index.php"><h2>Courses</h2></a>
 
   <form class="" name="formAjout" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
@@ -165,7 +165,6 @@
   <?php
 
     // Construction de la liste
-//    echo "<div class=\"overflowTest\">\n";
     echo "<div class=\"container overflowTest\" >\n";
     echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
@@ -212,7 +211,6 @@
     
     echo "</form>\n";
     echo "</div>\n";
-//    echo "</div>\n";
       
   ?>
   
