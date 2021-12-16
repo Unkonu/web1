@@ -185,9 +185,9 @@
       
         // Affichage différent de la ligne selon statut
         if ($statut == 1) {
-          $couleurElement = "bg-primary";
-        } else {
           $couleurElement = "bg-warning";
+        } else {
+          $couleurElement = "bg-primary";
         }
             
         echo "<div class=\"input-group mb-1 row\">\n";
