@@ -160,13 +160,41 @@
   
   <section>
   
+  <div width=100 height=100 class="overflow-auto">
+    testdslfdsklf
+    dsf
+    ds
+    fds
+    f
+    ds
+    fds
+    f
+    ds
+    fds
+    f
+    ds
+    fds
+    df
+    fds
+    ds
+    f
+    ds
+    fds
+    f
+    ds
+    fds
+  
+  </div>
+
+
+  
   <?php
 
     // Construction de la liste
     echo "<div class=\"container\">\n";
     echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
-    echo "<div class=\"row-8 overflow-auto\">\n";
+    echo "<div class=\"overflow-auto row-1\">\n";
       
     try {      
       //On établit la connexion
