@@ -1,7 +1,6 @@
 
 .overflowTest {
   overflow: scroll;
-  border: 1px solid #ccc;
 }
 
 #overflowTest {
