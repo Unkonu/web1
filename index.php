@@ -169,7 +169,7 @@
     echo "<div class=\"container\">\n";
     echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
-    echo "<div class=\"vh-50 overflow-auto\">\n";
+    echo "<div class=\"overflow-auto vw-50 vh-50\">\n";
       
     try {      
       //On établit la connexion
