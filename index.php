@@ -8,8 +8,6 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script-->
-
   <!-- include jQuery library --> 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> 
 
@@ -47,7 +45,7 @@
             // echo "Connexion OK <br/>";
                   
             $requete = "INSERT INTO courses (nom,statut) 
-                        VALUES ('$nom',false)";
+                        VALUES ('$nom',true)";
 
             // echo "Resultats de la requete $requete <br />";
             
@@ -153,6 +151,11 @@
   <section>
   
   <?php
+
+    // Construction de la liste
+    echo "<div class=\"container\">\n";
+    echo "<form name=\"action\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
+    echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
       
     try {      
       //On établit la connexion
@@ -163,12 +166,7 @@
       $requete = "SELECT * FROM courses ORDER BY id";
 
       // echo "Resultats de la requete $requete <br />";
-      
-      // Construction de la liste
-      echo "<div class=\"container\">\n";
-      echo "<form name=\"action\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
-      echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
-       
+             
       foreach ($conn->query($requete) as $ligne) {
       
         $ligneId = $ligne['id'];
@@ -176,23 +174,21 @@
         $statut = $ligne['statut'];
       
         // Affichage différent de la ligne selon statut
-        if ($statut == 0) {
+        if ($statut) {
           $couleurElement = "bg-primary";
         } else {
           $couleurElement = "bg-warning";
         }
             
         echo "<div class=\"input-group mb-1 row\">\n";
-        echo "<a onclick=\"initElement(this);\" class=\"form-control ml-1 ".$couleurElement."\">".$nomCourse."</a>\n";
+//        echo "<a onclick=\"initElement(this);\" class=\"form-control ml-1 ".$couleurElement."\">".$nomCourse."</a>\n";
+        echo "<input readonly onclick=\"initElement(this);\" class=\"form-control ml-1 ".$couleurElement."\" value=\"".$nomCourse."\" />\n";
         echo "<div class=\"input-group-append col-1\">\n";
-        echo "<input class=\"btn col-1 swatch-blue\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
+        echo "<input class=\"btn col-1 swatch-blue\" name=\"ligne_".$ligneId."_".$statut."\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
         echo "</div>\n";
 
       }// foreach
- 
-      echo "</form>\n";
-      echo "</div>\n";
       
       // Fermeture connexion
       $conn = null;
@@ -201,6 +197,9 @@
       echo "Erreur : ", $e->getMessage(),"<br />\n";    
     }// catch
     
+    echo "</form>\n";
+    echo "</div>\n";
+  
       
   ?>
   
@@ -217,7 +216,7 @@
         element.classList.add("bg-primary");
       }// Fin if
       
-      alert("soumission du formulaire");
+      // alert("soumission du formulaire");
 
       document.forms["action"].submit();
       
