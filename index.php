@@ -97,8 +97,9 @@
                   $statutBD = true;                
                 }
                 
-                $requete = "INSERT INTO courses (nom,statut) 
-                            VALUES ('$nom',$statutBD)";
+                $requete = "UPDATE courses 
+                            SET statut = $statutBD 
+                            WHERE id = $idCourse";
               } else {
                 $requete = "DELETE FROM courses WHERE id=$idCourse";
               }
