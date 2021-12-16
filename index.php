@@ -165,7 +165,7 @@
   
   <section>
   
-  <div id="overflowTest" class="overflowTest">
+  <div class="overflowTest">
     testdslfdddddddddddddddddddddddddddddddddddddddddddddddsklf<BR>
     testdslfdddddddddddddddddddddddddddddddddddddddddddddddsklf<BR>
     testdslfdddddddddddddddddddddddddddddddddddddddddddddddsklf<BR>
