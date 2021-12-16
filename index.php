@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimal-scale=1, user-scalable=no"/>
   
+  <link rel="stylesheet" href="style.css">
+  
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -160,7 +162,7 @@
   
   <section>
   
-  <div width=100 height=100 class="overflow-auto">
+  <div class="overflowTest">
     testdslfdsklf<BR>
     dsf<BR>
     testdslfdsklf<BR>
