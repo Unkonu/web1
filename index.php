@@ -68,18 +68,14 @@
         
         case "modif" :
                    
-          // parcours du tableau pour récupérer le numéro d'Id
+          // parcours du tableau pour récupérer le numéro d'Id et l'opération : modif ou suppr
           foreach($_POST as $cle => $valeur) {
-          
-            // echo $cle."-".$valeur."<BR>\n";
-                        
-            if(!empty(strstr($cle,"ligne_"))) {
-            
+                                  
+            if (!empty(strstr($cle,"modif_")) || !empty(strstr($cle,"suppr_"))) {
               $elements = explode("_", $cle);
+              $type = $elements[0];
               $idCourse = $elements[1];
-              $statutCourse = $elements[2];
-                            
-              // echo "ID trouvé : $idCourse<BR>\n";
+              $statutCourse = $elements[2];             
             }// Fin if
             
           }// Fin foreach
@@ -91,8 +87,18 @@
               $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
             
               // echo "Connexion OK <br/>";
-                    
-              $requete = "DELETE FROM courses WHERE id=$idCourse";
+              if ($type == "modif") {
+                if ($statutCourse) {
+                  $statutBD = false;
+                } else {
+                  $statutBD = true;                
+                }
+                
+                $requete = "INSERT INTO courses (nom,statut) 
+                            VALUES ('$nom',$statutBD)";
+              } else {
+                $requete = "DELETE FROM courses WHERE id=$idCourse";
+              }
 
               // echo "Resultats de la requete $requete <br />";
               
@@ -181,9 +187,9 @@
         }
             
         echo "<div class=\"input-group mb-1 row\">\n";
-        echo "<input type=\"submit\" class=\"form-control ml-1 ".$couleurElement."\" name=\"ligne_".$ligneId."_".$statut."\" value=\"".$nomCourse."\" />\n";
+        echo "<input type=\"submit\" class=\"form-control ml-1 ".$couleurElement."\" name=\"modif_".$ligneId."_".$statut."\" value=\"".$nomCourse."\" />\n";
         echo "<div class=\"input-group-append col-1\">\n";
-        echo "<input class=\"btn col-1 swatch-blue\" name=\"ligne_".$ligneId."_".$statut."\" type=\"submit\" value=\"-\">\n"; 
+        echo "<input class=\"btn col-1 swatch-blue\" name=\"suppr_".$ligneId."_".$statut."\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
         echo "</div>\n";
 
