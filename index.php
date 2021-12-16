@@ -165,7 +165,7 @@
   <?php
 
     // Construction de la liste
-    echo "<div class=\"overflowTest\">\n";
+//    echo "<div class=\"overflowTest\">\n";
     echo "<div class=\"container overflowTest\" >\n";
     echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
@@ -212,7 +212,7 @@
     
     echo "</form>\n";
     echo "</div>\n";
-    echo "</div>\n";
+//    echo "</div>\n";
       
   ?>
   
