@@ -1,9 +1,5 @@
 
 .overflowTest {
-  overflow: scroll;
+  overflow: auto;
 }
 
-#overflowTest {
-  overflow: scroll;
-  border: 1px solid #ccc;
-}
