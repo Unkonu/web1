@@ -165,10 +165,10 @@
   <?php
 
     // Construction de la liste
-    echo "<div class=\"container overflow-auto\" >\n";
+    echo "<div class=\"container overflow-auto d-md-flex\" >\n";
     echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
-    echo "<div id=\"overflow-auto\" style=\"max-width: 260px; max-height: 100px;\">\n";
+    echo "<div class=\"overflow-auto\" style=\"max-width: 260px; max-height: 100px;\">\n";
       
     try {      
       //On établit la connexion
