@@ -140,7 +140,7 @@
 
   <section>
   
-  <div class="container">
+  <div class="container-fluid">
 
     <a href="index.php" class=""><h2>Courses</h2></a>
 
@@ -169,7 +169,7 @@
     echo "<div class=\"container\">\n";
     echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
-    echo "<div class=\"overflow-auto vw-50 vh-50\">\n";
+    echo "<div class=\"overflow-auto\">\n";
       
     try {      
       //On établit la connexion
