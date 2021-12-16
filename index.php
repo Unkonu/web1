@@ -77,7 +77,7 @@
               $idCourse = $elements[1];
               $statutCourse = $elements[2];
               
-              echo $type."_".$idCourse."_".$statutCourse."\n";
+              // echo $type."_".$idCourse."_".$statutCourse."\n";
                          
             }// Fin if
             
