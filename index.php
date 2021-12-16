@@ -183,8 +183,8 @@
         }
             
         echo "<div class=\"input-group mb-1 row\">\n";
-        echo "<a onclick=\"initElement(this);\" class=\"form-control ml-1 ".$couleurElement."\">".$nomCourse."</a>";
-        echo "<div class=\"input-group-append col-1\">";
+        echo "<a onclick=\"initElement(this);\" class=\"form-control ml-1 ".$couleurElement."\">".$nomCourse."</a>\n";
+        echo "<div class=\"input-group-append col-1\">\n";
         echo "<input class=\"btn col-1 swatch-blue\" name=\"ligne_$ligneId\" type=\"submit\" value=\"-\">\n"; 
         echo "</div>\n";
         echo "</div>\n";
