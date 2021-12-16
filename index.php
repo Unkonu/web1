@@ -165,7 +165,7 @@
   <?php
 
     // Construction de la liste
-    echo "<div height=500 class=\"container overflow-hidden\">\n";
+    echo "<div class=\"container overflow-auto\" style=\"max-width: 260px; max-height: 100px;\">\n";
     echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
     echo "<div class=\"\">\n";
