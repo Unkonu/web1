@@ -45,7 +45,7 @@
             // echo "Connexion OK <br/>";
                   
             $requete = "INSERT INTO courses (nom,statut) 
-                        VALUES ('$nom',true)";
+                        VALUES ('$nom',0)";
 
             // echo "Resultats de la requete $requete <br />";
             
@@ -91,10 +91,10 @@
             
               // echo "Connexion OK <br/>";
               if ($type == "modif") {
-                if ($statutCourse == 1) {
-                  $statutBD = 0;
+                if ($statutCourse == 0) {
+                  $statutBD = 1;
                 } else {
-                  $statutBD = 1;                
+                  $statutBD = 0;                
                 }
                 
                 $requete = "UPDATE courses 
@@ -173,7 +173,7 @@
     
       // echo "Connexion OK <br/>";
             
-      $requete = "SELECT * FROM courses ORDER BY id,statut";
+      $requete = "SELECT * FROM courses ORDER BY statut,id";
 
       // echo "Resultats de la requete $requete <br />";
              
@@ -184,7 +184,7 @@
         $statut = $ligne['statut'];
       
         // Affichage différent de la ligne selon statut
-        if ($statut == 1) {
+        if ($statut == 0) {
           $couleurElement = "bg-warning";
         } else {
           $couleurElement = "bg-primary";
