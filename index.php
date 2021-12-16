@@ -11,7 +11,6 @@
   <!-- include jQuery library --> 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> 
 
-
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -166,7 +165,7 @@
   <?php
 
     // Construction de la liste
-    echo "<div class=\"container vh-100 overflowTest\">\n";
+    echo "<div height=300 class=\"container vh-100 overflowTest\">\n";
     echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
     echo "<div class=\"\">\n";
