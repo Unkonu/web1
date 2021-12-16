@@ -140,7 +140,7 @@
 
   <section>
   
-  <div class="container overflowTest">
+  <div class="container">
 
     <a href="index.php" class=""><h2>Courses</h2></a>
 
@@ -166,10 +166,10 @@
   <?php
 
     // Construction de la liste
-    echo "<div class=\"container\">\n";
+    echo "<div class=\"container overflowTest\">\n";
     echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
-    echo "<div class=\"overflow-auto\">\n";
+    echo "<div class=\"\">\n";
       
     try {      
       //On établit la connexion
