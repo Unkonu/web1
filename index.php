@@ -140,7 +140,7 @@
 
   <section>
   
-  <div class="container-fluid">
+  <div class="container row-15">
 
     <a href="index.php" class=""><h2>Courses</h2></a>
 
