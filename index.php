@@ -91,7 +91,7 @@
             
               // echo "Connexion OK <br/>";
               if ($type == "modif") {
-                if ($statutCourse) {
+                if ($statutCourse == 0) {
                   $statutBD = false;
                 } else {
                   $statutBD = true;                
