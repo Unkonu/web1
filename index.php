@@ -46,8 +46,7 @@
           
             // echo "Connexion OK <br/>";
                   
-            $requete = "INSERT INTO courses (nom,statut) 
-                        VALUES ('$nom',0)";
+            $requete = "INSERT INTO courses (nom,statut) VALUES ('$nom',0)";
 
             // echo "Resultats de la requete $requete <br />";
             
@@ -99,9 +98,7 @@
                   $statutBD = 0;                
                 }
                 
-                $requete = "UPDATE courses 
-                            SET statut = $statutBD 
-                            WHERE id = $idCourse";
+                $requete = "UPDATE courses SET statut = $statutBD WHERE id = $idCourse";
               } else {
                 $requete = "DELETE FROM courses WHERE id=$idCourse";
               }
