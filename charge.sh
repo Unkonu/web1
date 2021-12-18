@@ -6,7 +6,7 @@ git commit -m "test"
 git push origin courses 
 
 
-LISTE_FICHIERS='index.php index.js style.css courses_entete.php courses_pied.php' 
+LISTE_FICHIERS='index.php index_test.php index.js style.css courses_entete.php courses_pied.php' 
 
 
 for variable in $LISTE_FICHIERS 
