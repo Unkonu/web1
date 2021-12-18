@@ -177,13 +177,11 @@
 
       echo "Tentative de connexion <br/>";
  
-      $conn = new mysqli(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE);
+      $conn = new mysqli(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE);
     
       if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }    
-    
-      mysqli_select_db($conn,NOM_BASE) or die("Erreur de connexion");
     
       echo "Connexion OK <br/>";
             
@@ -191,8 +189,9 @@
 
       echo "Resultats de la requete $requete <br />";
       
-      $req=mysqli_query($conn,$requete);
-      // $tab=mysqli_fetch_assoc($req)
+      $resultat=mysqli->query($requete);
+      
+      echo "Select a retourné ".$resultat->num_rows."\n";
       
       foreach (mysqli_fetch_assoc($req) as $ligne) {
       
