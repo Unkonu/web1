@@ -181,8 +181,12 @@
       $requete = "SELECT * FROM courses ORDER BY statut,id";
 
       // echo "Resultats de la requete $requete <br />";
-             
-      foreach ($conn->query($requete) as $ligne) {
+      
+      $req=mysqli_query($conn,$requete);
+      // $tab=mysqli_fetch_assoc($req)
+      
+    
+      foreach (mysqli_fetch_assoc($req) as $ligne) {
       
         $ligneId = $ligne['id'];
         $nomCourse = $ligne['nom'];
