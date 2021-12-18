@@ -54,7 +54,7 @@
             $requete = "INSERT INTO courses(nom,statut) VALUES ('".$nom."',0)";
 
             // echo "Resultats de la requete $requete <br />";
-            $resultat = mysqli->query($conn, $requete);
+            $resultat=$conn->query($requete);
               
             if (!$resultat) {
             
@@ -116,8 +116,8 @@
 
               // echo "Resultats de la requete $requete <br />";
               
-              $resultat = mysqli->query($conn, $requete);
-              
+              $resultat=$conn->query($requete);
+             
               if (!$resultat) {
               
                 echo "Suppression réussie<br/>";
