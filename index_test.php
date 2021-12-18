@@ -189,7 +189,7 @@
 
       echo "Resultats de la requete $requete <br />";
       
-      $resultat=mysqli->query($requete);
+      $resultat=$conn->query($requete);
       
       echo "Select a retourné ".$resultat->num_rows."\n";
       
