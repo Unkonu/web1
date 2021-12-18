@@ -177,7 +177,11 @@
 
       echo "Tentative de connexion <br/>";
  
-      $conn = new mysqli_connect(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE) or die("Erreur de connexion");
+      $conn = new mysqli(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE);
+    
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }    
     
       mysqli_select_db($conn,NOM_BASE) or die("Erreur de connexion");
     
