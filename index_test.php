@@ -143,9 +143,9 @@
   
   <div class="container">
 
-    <a href="index.php"><h2>Courses</h2></a>
+    <a href="index_test.php"><h2>Courses</h2></a>
 
-  <form class="" name="formAjout" enctype="multipart/form-data" method="post" action="index.php">
+  <form class="" name="formAjout" enctype="multipart/form-data" method="post" action="index_test.php">
     <input id="action" name="action" type="hidden" value="ajout">
     <div class="input-group mb-3 row">
     
@@ -168,13 +168,13 @@
 
     // Construction de la liste
     echo "<div class=\"container overflowTest\" >\n";
-    echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
+    echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index_test.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
       
     // try {      
       //On établit la connexion
       // $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
-      $conn = new mysqli_connect(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE);
+      $conn = new mysqli_connect(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE) or dir("Erreur de connexion");
     
       echo "Connexion OK <br/>";
             
