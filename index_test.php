@@ -193,7 +193,8 @@
       
       echo "Select a retourné ".$resultat->num_rows."\n";
       
-      foreach (mysqli_fetch_assoc($req) as $ligne) {
+      while ($ligne = mysqli_fetch_array($resultat)) {
+      // foreach (mysqli_fetch_assoc($req) as $ligne) {
       
         $ligneId = $ligne['id'];
         $nomCourse = $ligne['nom'];
