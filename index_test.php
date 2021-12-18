@@ -174,7 +174,9 @@
     // try {      
       //On établit la connexion
       // $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
-      $conn = new mysqli_connect(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE) or dir("Erreur de connexion");
+      $conn = new mysqli_connect(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE) or die("Erreur de connexion");
+    
+      mysqli_select_db($conn,NOM_BASE) or die("Erreur de connexion");; 
     
       echo "Connexion OK <br/>";
             
