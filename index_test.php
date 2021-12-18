@@ -176,16 +176,15 @@
       // $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
       $conn = new mysqli_connect(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE);
     
-      // echo "Connexion OK <br/>";
+      echo "Connexion OK <br/>";
             
       $requete = "SELECT * FROM courses ORDER BY statut,id";
 
-      // echo "Resultats de la requete $requete <br />";
+      echo "Resultats de la requete $requete <br />";
       
       $req=mysqli_query($conn,$requete);
       // $tab=mysqli_fetch_assoc($req)
       
-    
       foreach (mysqli_fetch_assoc($req) as $ligne) {
       
         $ligneId = $ligne['id'];
