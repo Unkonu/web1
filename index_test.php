@@ -42,19 +42,23 @@
           
           // try {      
             // On établit la connexion
-      // $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
-      $conn = new mysqli_connect(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE);
+            // $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
+            $conn = new mysqli(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE);
+    
+            if ($conn->connect_error) {
+              die("Connection failed: " . $conn->connect_error);
+            }    
           
             // echo "Connexion OK <br/>";
                   
             $requete = "INSERT INTO courses(nom,statut) VALUES ('".$nom."',0)";
 
             // echo "Resultats de la requete $requete <br />";
-            $req = mysqli_query($conn, $requete);
+            $resultat = mysqli->query($conn, $requete);
               
-            if (!$req) {
+            if (!$resultat) {
             
-              // echo "Insertion réussie<br/>";
+              echo "Insertion réussie<br/>";
 
             }// if
             
@@ -91,8 +95,12 @@
             // try {      
               //On établit la connexion
               // $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
-              $conn = new mysqli_connect(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE);
-           
+              $conn = new mysqli(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE);
+    
+              if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+              }    
+          
               // echo "Connexion OK <br/>";
               if ($type == "modif") {
                 if ($statutCourse == 0) {
@@ -108,9 +116,9 @@
 
               // echo "Resultats de la requete $requete <br />";
               
-              $req = mysqli_query($conn, $requete);
+              $resultat = mysqli->query($conn, $requete);
               
-              if (!$req) {
+              if (!$resultat) {
               
                 echo "Suppression réussie<br/>";
 
@@ -183,18 +191,17 @@
         die("Connection failed: " . $conn->connect_error);
       }    
     
-      echo "Connexion OK <br/>";
+      // echo "Connexion OK <br/>";
             
       $requete = "SELECT * FROM courses ORDER BY statut,id";
 
-      echo "Resultats de la requete $requete <br />";
+      // echo "Resultats de la requete $requete <br />";
       
       $resultat=$conn->query($requete);
       
-      echo "Select a retourné ".$resultat->num_rows."\n";
+      // echo "Select a retourné ".$resultat->num_rows."\n";
       
       while ($ligne = mysqli_fetch_array($resultat)) {
-      // foreach (mysqli_fetch_assoc($req) as $ligne) {
       
         $ligneId = $ligne['id'];
         $nomCourse = $ligne['nom'];
