@@ -19,7 +19,7 @@
   <header>
     <?php
       include 'courses_entete.php';
-    ?>  
+    ?>      
   </header>
 
   <?php
