@@ -40,34 +40,28 @@
           
           if (!empty($nom)) {
           
-          // try {      
+          try {      
             // On établit la connexion
-            // $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
-            $conn = new mysqli(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE);
-    
-            if ($conn->connect_error) {
-              die("Connection failed: " . $conn->connect_error);
-            }    
+            $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
           
             // echo "Connexion OK <br/>";
                   
-            $requete = "INSERT INTO courses(nom,statut) VALUES ('".$nom."',0)";
+            $requete = "INSERT INTO courses (nom,statut) VALUES ('$nom',0)";
 
             // echo "Resultats de la requete $requete <br />";
-            $resultat=$conn->query($requete);
-              
-            if (!$resultat) {
             
-              echo "Insertion réussie<br/>";
+            if ($conn->exec($requete) === true) {
+            
+              // echo "Insertion réussie<br/>";
 
             }// if
             
             // Fermeture connexion
             $conn = null;
             
-          // } catch(PDOException $e) {
-          //   echo "Erreur : ", $e->getMessage(),"<br />";    
-          // }// catch
+          } catch(PDOException $e) {
+            echo "Erreur : ", $e->getMessage(),"<br />";    
+          }// catch
           
           }// Fin if
         
@@ -78,7 +72,7 @@
           // parcours du tableau pour récupérer le numéro d'Id et l'opération : modif ou suppr
           foreach($_POST as $cle => $valeur) {
                                   
-            // if (!empty(strstr($cle,'modif_')) || !empty(strstr($cle,'suppr_'))) {
+            if (!empty(strstr($cle,"modif_")) || !empty(strstr($cle,"suppr_"))) {
               $elements = explode("_", $cle);
               $type = $elements[0];
               $idCourse = $elements[1];
@@ -86,21 +80,16 @@
               
               // echo $type."_".$idCourse."_".$statutCourse."\n";
                          
-            // }// Fin if
+            }// Fin if
             
           }// Fin foreach
           
           if (isset($idCourse)) {
           
-            // try {      
+            try {      
               //On établit la connexion
-              // $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
-              $conn = new mysqli(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE);
-    
-              if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-              }    
-          
+              $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
+            
               // echo "Connexion OK <br/>";
               if ($type == "modif") {
                 if ($statutCourse == 0) {
@@ -109,16 +98,14 @@
                   $statutBD = 0;                
                 }
                 
-                $requete = "UPDATE courses SET statut = ".$statutBD." WHERE id = ".$idCourse;
+                $requete = "UPDATE courses SET statut = $statutBD WHERE id = $idCourse";
               } else {
-                $requete = "DELETE FROM courses WHERE id=".$idCourse;
+                $requete = "DELETE FROM courses WHERE id=$idCourse";
               }
 
               // echo "Resultats de la requete $requete <br />";
               
-              $resultat=$conn->query($requete);
-             
-              if (!$resultat) {
+              if ($conn->exec($requete) === true) {
               
                 echo "Suppression réussie<br/>";
 
@@ -127,9 +114,9 @@
               // Fermeture connexion
               $conn = null;
               
-            // } catch(PDOException $e) {
-            //  echo "Erreur : ", $e->getMessage(),"<br />";    
-            // }// catch
+            } catch(PDOException $e) {
+              echo "Erreur : ", $e->getMessage(),"<br />";    
+            }// catch
       
           }// Fin if
           
@@ -151,9 +138,9 @@
   
   <div class="container">
 
-    <a href="index_test.php"><h2>Courses</h2></a>
+    <a href="index.php"><h2>Courses</h2></a>
 
-  <form class="" name="formAjout" enctype="multipart/form-data" method="post" action="index_test.php">
+  <form class="" name="formAjout" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
     <div class="input-group mb-3 row">
     
@@ -176,32 +163,20 @@
 
     // Construction de la liste
     echo "<div class=\"container overflowTest\" >\n";
-    echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index_test.php\">\n";
+    echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
       
-    // try {      
+    try {      
       //On établit la connexion
-      // $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
-
-      echo "Tentative de connexion <br/>";
- 
-      $conn = new mysqli(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE);
-    
-      if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-      }    
+      $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
     
       // echo "Connexion OK <br/>";
             
       $requete = "SELECT * FROM courses ORDER BY statut,id";
 
       // echo "Resultats de la requete $requete <br />";
-      
-      $resultat=$conn->query($requete);
-      
-      // echo "Select a retourné ".$resultat->num_rows."\n";
-      
-      while ($ligne = mysqli_fetch_array($resultat)) {
+             
+      foreach ($conn->query($requete) as $ligne) {
       
         $ligneId = $ligne['id'];
         $nomCourse = $ligne['nom'];
@@ -226,9 +201,9 @@
       // Fermeture connexion
       $conn = null;
       
-    // } catch(PDOException $e) {
-    //  echo "Erreur : ", $e->getMessage(),"<br />\n";    
-    // }// catch
+    } catch(PDOException $e) {
+      echo "Erreur : ", $e->getMessage(),"<br />\n";    
+    }// catch
 
     
     echo "</form>\n";
