@@ -39,36 +39,27 @@
           }
           
           if (!empty($nom)) {
-          
-          // try {      
-            // On établit la connexion
-            // $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
-            $conn = new mysqli(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE);
-    
-            if ($conn->connect_error) {
-              die("Connection failed: " . $conn->connect_error);
-            }    
-          
+
+            // echo "Tentative de connexion <br/>";
+       
+            $conn = mysql_connect(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE) 
+                    or die("Connection failed: ".mysql_error());
+
             // echo "Connexion OK <br/>";
+            
+            mysql_select_db(NOM_BASE) or die('Impossible de sélectionner la base de données');
                   
             $requete = "INSERT INTO courses(nom,statut) VALUES ('".$nom."',0)";
 
-            // echo "Resultats de la requete $requete <br />";
-            $resultat=$conn->query($requete);
-              
-            if (!$resultat) {
-            
-              echo "Insertion réussie<br/>";
-
-            }// if
-            
-            // Fermeture connexion
-            $conn = null;
-            
-          // } catch(PDOException $e) {
-          //   echo "Erreur : ", $e->getMessage(),"<br />";    
-          // }// catch
+            $resultat = mysql_query($requete) or die('Échec de la requête : ' . mysql_error());
           
+            if (!$resultat) {                
+              // echo "Insertion réussie<br/>";
+            }// if
+              
+            // Fermeture connexion
+            mysql_close($conn);
+            
           }// Fin if
         
         break; // case Ajout
@@ -92,45 +83,39 @@
           
           if (isset($idCourse)) {
           
-            // try {      
-              //On établit la connexion
-              // $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
-              $conn = new mysqli(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE);
-    
-              if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-              }    
-          
-              // echo "Connexion OK <br/>";
-              if ($type == "modif") {
-                if ($statutCourse == 0) {
+            // echo "Tentative de connexion <br/>";
+       
+            $conn = mysql_connect(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE) 
+                    or die("Connection failed: ".mysql_error());
+
+            // echo "Connexion OK <br/>";
+            
+            mysql_select_db(NOM_BASE) or die('Impossible de sélectionner la base de données');
+                  
+            // echo "Connexion OK <br/>";
+            if ($type == "modif") {
+              if ($statutCourse == 0) {
                   $statutBD = 1;
-                } else {
+              } else {
                   $statutBD = 0;                
-                }
+              }
                 
                 $requete = "UPDATE courses SET statut = ".$statutBD." WHERE id = ".$idCourse;
-              } else {
+            } else {
                 $requete = "DELETE FROM courses WHERE id=".$idCourse;
-              }
+            }// Fin if
 
-              // echo "Resultats de la requete $requete <br />";
+            // echo "Resultats de la requete $requete <br />";
+            
+            $resultat = mysql_query($requete) or die('Échec de la requête : ' . mysql_error());
+          
+            if (!$resultat) {                
+              // echo "Suppression réussie<br/>";
+            }// if
               
-              $resultat=$conn->query($requete);
-             
-              if (!$resultat) {
-              
-                echo "Suppression réussie<br/>";
-
-              }// if
-              
-              // Fermeture connexion
-              $conn = null;
-              
-            // } catch(PDOException $e) {
-            //  echo "Erreur : ", $e->getMessage(),"<br />";    
-            // }// catch
-      
+            // Fermeture connexion
+            mysql_close($conn);
+                    
           }// Fin if
           
         break; // case Modif
@@ -151,9 +136,9 @@
   
   <div class="container">
 
-    <a href="index_test.php"><h2>Courses</h2></a>
+    <a href="index.php"><h2>Courses</h2></a>
 
-  <form class="" name="formAjout" enctype="multipart/form-data" method="post" action="index_test.php">
+  <form class="" name="formAjout" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
     <div class="input-group mb-3 row">
     
@@ -176,32 +161,31 @@
 
     // Construction de la liste
     echo "<div class=\"container overflowTest\" >\n";
-    echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index_test.php\">\n";
+    echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
     echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
       
     // try {      
       //On établit la connexion
       // $conn = new PDO("mysql:host=".NOM_SERVEUR.";dbname=".NOM_BASE, UTILISATEUR, MOTDEPASSE);
 
-      echo "Tentative de connexion <br/>";
+      // echo "Tentative de connexion <br/>";
  
-      $conn = new mysqli(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE, NOM_BASE);
-    
-      if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-      }    
-    
+      $conn = mysql_connect(NOM_SERVEUR, UTILISATEUR, MOTDEPASSE) 
+              or die("Connection failed: ".mysql_error());
+
       // echo "Connexion OK <br/>";
+      
+      mysql_select_db(NOM_BASE) or die('Impossible de sélectionner la base de données');
             
       $requete = "SELECT * FROM courses ORDER BY statut,id";
 
       // echo "Resultats de la requete $requete <br />";
       
-      $resultat=$conn->query($requete);
+      $resultat = mysql_query($requete) or die('Échec de la requête : ' . mysql_error());
       
       // echo "Select a retourné ".$resultat->num_rows."\n";
       
-      while ($ligne = mysqli_fetch_array($resultat)) {
+      while ($ligne = mysql_fetch_array($resultat)) {
       
         $ligneId = $ligne['id'];
         $nomCourse = $ligne['nom'];
@@ -224,7 +208,7 @@
       }// foreach
       
       // Fermeture connexion
-      $conn = null;
+      mysql_close($conn);
       
     // } catch(PDOException $e) {
     //  echo "Erreur : ", $e->getMessage(),"<br />\n";    
