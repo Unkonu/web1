@@ -12,6 +12,7 @@ LISTE_FICHIERS='index.php index.php7 index.js style.css courses_entete.php cours
 for variable in $LISTE_FICHIERS 
 do
 
-  rcp $variable devphp1@192.168.0.1:/var/www/html/courses/
+  # rcp $variable devphp1@192.168.0.1:/var/www/html/courses/
+  cp $variable /var/www/html/courses/
 
 done
