@@ -135,10 +135,11 @@
   <section>
   
   <div class="container">
+    <h2>
+  	<a href="index.php">Courses</a>
+  	</h2>
 
-    <a href="index.php"><h2>Courses</h2></a>
-
-  <form class="" name="formAjout" enctype="multipart/form-data" method="post" action="index.php">
+    <form class="" name="formAjout" enctype="multipart/form-data" method="post" action="index.php">
     <input id="action" name="action" type="hidden" value="ajout">
     <div class="input-group mb-3 row">
     
@@ -149,7 +150,7 @@
     </div>
     
     </div>
-  </form>
+    </form>
   
   </div>
 
@@ -161,8 +162,8 @@
 
     // Construction de la liste
     echo "<div class=\"container overflowTest\" >\n";
-    echo "<form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
-    echo "<input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
+    echo "  <form name=\"formModif\" class=\"\" enctype=\"multipart/form-data\" method=\"post\" action=\"index.php\">\n";
+    echo "  <input id=\"action\" name=\"action\" type=\"hidden\" value=\"modif\">\n";
       
     // try {      
       //On établit la connexion
@@ -177,7 +178,7 @@
       
       mysql_select_db(NOM_BASE) or die('Impossible de sélectionner la base de données');
             
-      $requete = "SELECT * FROM courses ORDER BY statut,id";
+      $requete = "SELECT * FROM courses ORDER BY statut,id DESC";
 
       // echo "Resultats de la requete $requete <br />";
       
@@ -198,12 +199,12 @@
           $couleurElement = "bg-primary";
         }
             
-        echo "<div class=\"input-group mb-1 row\">\n";
-        echo "<input type=\"submit\" class=\"form-control ml-1 ".$couleurElement."\" name=\"modif_".$ligneId."_".$statut."\" value=\"".$nomCourse."\" />\n";
-        echo "<div class=\"input-group-append col-1\">\n";
-        echo "<input class=\"btn col-1\" name=\"suppr_".$ligneId."_".$statut."\" type=\"submit\" value=\"-\">\n"; 
-        echo "</div>\n";
-        echo "</div>\n";
+        echo "  <div class=\"input-group mb-1 row\">\n";
+        echo "    <input type=\"submit\" class=\"form-control ml-1 ".$couleurElement."\" name=\"modif_".$ligneId."_".$statut."\" value=\"".$nomCourse."\" />\n";
+        echo "    <div class=\"input-group-append col-1\">\n";
+        echo "    <input class=\"btn col-1\" name=\"suppr_".$ligneId."_".$statut."\" type=\"submit\" value=\"-\">\n"; 
+        echo "    </div>\n";
+        echo "  </div>\n";
 
       }// foreach
       
@@ -215,7 +216,7 @@
     // }// catch
 
     
-    echo "</form>\n";
+    echo "  </form>\n";
     echo "</div>\n";
       
   ?>
